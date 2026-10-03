@@ -1,0 +1,224 @@
+/* ===================================================
+   RESPONSIVE.CSS - HEMSAGAR ❤️ ARCHANA
+   Mobile-first, device-agnostic responsive rules
+   =================================================== */
+
+/* Safe area padding */
+body {
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+  padding-left: env(safe-area-inset-left, 0px);
+  padding-right: env(safe-area-inset-right, 0px);
+}
+
+/* Base minimum interactive touch target size */
+button,
+a,
+input,
+.btn,
+.constellation-node,
+.heartbeat-btn {
+  min-height: 44px;
+}
+
+/* --- TABLET BREAKPOINT (<= 1024px) --- */
+@media (max-width: 1024px) {
+  section {
+    padding: clamp(70px, 10vw, 110px) 20px;
+  }
+
+  .editorial-gallery {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .editorial-item-large {
+    grid-column: 1 / 3;
+    aspect-ratio: 16 / 10;
+  }
+
+  .editorial-item-small {
+    grid-column: 1 / 2;
+    aspect-ratio: 4 / 5;
+  }
+
+  .editorial-item-wide {
+    grid-column: 2 / 3;
+    aspect-ratio: 4 / 5;
+    margin-top: 0;
+  }
+
+  .promises-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+}
+
+/* --- MOBILE BREAKPOINT (<= 768px) --- */
+@media (max-width: 768px) {
+  section {
+    padding: 60px 18px;
+  }
+
+  /* Audio Widget adjustments */
+  .audio-widget {
+    top: 16px;
+    right: 16px;
+  }
+
+  .audio-toggle-btn {
+    padding: 8px 14px;
+    font-size: 10px;
+  }
+
+  /* Hero Section */
+  .hero {
+    padding: 40px 16px 60px;
+  }
+
+  .hero-card {
+    padding: 36px 18px;
+    border-radius: var(--radius-lg);
+  }
+
+  .hero-card::before {
+    inset: 8px;
+    border-radius: 16px;
+  }
+
+  .hero-avatar-wrap {
+    width: 130px;
+    height: 130px;
+    margin-bottom: 18px;
+  }
+
+  /* Two Portraits Split Section -> Stacked */
+  .split-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .portrait-frame {
+    max-width: 320px;
+    aspect-ratio: 4 / 5;
+  }
+
+  .portrait-left,
+  .portrait-right {
+    transform: none;
+  }
+
+  /* Editorial Gallery -> Clean Stack */
+  .editorial-gallery {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .editorial-item-large,
+  .editorial-item-small,
+  .editorial-item-wide {
+    grid-column: 1 / -1;
+    aspect-ratio: 4 / 3.5;
+  }
+
+  /* Promises Grid -> Stack */
+  .promises-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .promise-card {
+    padding: 30px 20px;
+  }
+
+  /* Timeline */
+  .timeline {
+    padding-left: 24px;
+    margin-top: 40px;
+  }
+
+  .timeline::before {
+    left: 4px;
+  }
+
+  .timeline-dot {
+    left: -24px;
+    width: 14px;
+    height: 14px;
+  }
+
+  .timeline-item {
+    margin-bottom: 36px;
+    padding-left: 18px;
+  }
+
+  /* Constellation Sky */
+  .constellation-sky {
+    height: 280px;
+  }
+
+  .constellation-node {
+    width: 44px;
+    height: 44px;
+  }
+
+  /* Countdown Grid: 2 x 2 on mobile */
+  .countdown-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .countdown-slot {
+    padding: 14px 8px;
+  }
+
+  .countdown-val {
+    font-size: 38px;
+  }
+
+  /* Proposal Actions: Wrap & Touch Friendly */
+  .proposal-actions {
+    flex-direction: column;
+    width: 100%;
+    gap: 16px;
+  }
+
+  .proposal-actions .btn {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  /* Keepsake Frame */
+  .keepsake-frame {
+    padding: 36px 18px;
+  }
+}
+
+/* --- SMALL MOBILE BREAKPOINT (<= 390px) --- */
+@media (max-width: 390px) {
+  .hero .names {
+    font-size: 46px;
+  }
+
+  .title {
+    font-size: 32px;
+  }
+
+  .letter-box {
+    padding: 24px 16px;
+  }
+
+  .letter-body {
+    padding-left: 16px;
+  }
+
+  .letter-paragraph {
+    font-size: 19px;
+  }
+
+  .heartbeat-btn {
+    width: 110px;
+    height: 110px;
+    font-size: 32px;
+  }
+}

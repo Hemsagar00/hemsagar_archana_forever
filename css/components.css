@@ -1,0 +1,774 @@
+/* ===================================================
+   COMPONENTS.CSS - HEMSAGAR ❤️ ARCHANA
+   Component styles for interactive storytelling elements
+   =================================================== */
+
+/* --- 1. BUTTONS & CONTROLS --- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 14px 34px;
+  border-radius: var(--radius-full);
+  font-family: var(--font-sans);
+  font-size: 13.5px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: all var(--duration-normal) var(--ease-spring);
+  position: relative;
+  overflow: hidden;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.btn:focus-visible {
+  outline: 2px solid var(--gold-400);
+  outline-offset: 4px;
+}
+
+.btn-primary,
+.btn-gold {
+  background: linear-gradient(135deg, var(--gold-400) 0%, var(--gold-500) 100%);
+  color: var(--bg-950);
+  box-shadow: 0 8px 30px var(--gold-glow);
+  font-weight: 700;
+}
+
+.btn-primary:hover,
+.btn-gold:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 16px 45px rgba(226, 192, 105, 0.45);
+  filter: brightness(1.06);
+}
+
+.btn-primary:active,
+.btn-gold:active {
+  transform: translateY(0) scale(0.98);
+}
+
+.btn-secondary,
+.btn-outline {
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--mint-100);
+  border-color: var(--border-green);
+  backdrop-filter: blur(10px);
+}
+
+.btn-secondary:hover,
+.btn-outline:hover {
+  background: rgba(226, 192, 105, 0.12);
+  border-color: var(--gold-400);
+  color: var(--gold-300);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.btn-lg {
+  padding: 18px 46px;
+  font-size: 15px;
+  letter-spacing: 0.22em;
+}
+
+/* --- 2. FLOATING AUDIO CONTROLLER --- */
+.audio-widget {
+  position: fixed;
+  top: 24px;
+  right: 24px;
+  z-index: var(--z-audio);
+}
+
+.audio-toggle-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 18px;
+  border-radius: var(--radius-full);
+  background: rgba(4, 14, 8, 0.82);
+  border: 1px solid var(--border-gold);
+  color: var(--mint-100);
+  font-family: var(--font-sans);
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  transition: all var(--duration-normal) var(--ease-spring);
+}
+
+.audio-toggle-btn:hover {
+  background: rgba(14, 40, 24, 0.95);
+  border-color: var(--gold-300);
+  transform: scale(1.04);
+  color: var(--gold-300);
+}
+
+.audio-toggle-btn:focus-visible {
+  outline: 2px solid var(--gold-400);
+  outline-offset: 3px;
+}
+
+.audio-bars {
+  display: flex;
+  align-items: flex-end;
+  gap: 3px;
+  height: 14px;
+  width: 16px;
+}
+
+.audio-bar {
+  width: 2.5px;
+  background: var(--gold-400);
+  border-radius: 2px;
+  height: 4px;
+  transition: height 0.25s ease;
+}
+
+.audio-toggle-btn[aria-pressed="true"] .audio-bar:nth-child(1) {
+  animation: audioWave 1s infinite ease-in-out alternate;
+}
+.audio-toggle-btn[aria-pressed="true"] .audio-bar:nth-child(2) {
+  animation: audioWave 1.4s 0.2s infinite ease-in-out alternate;
+}
+.audio-toggle-btn[aria-pressed="true"] .audio-bar:nth-child(3) {
+  animation: audioWave 0.8s 0.4s infinite ease-in-out alternate;
+}
+
+@keyframes audioWave {
+  0% { height: 3px; }
+  100% { height: 14px; }
+}
+
+/* --- 3. SECTION 0: MINIMAL MONOGRAM LOADER --- */
+.app-loader {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: var(--bg-950);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.7s;
+}
+
+.app-loader.loaded {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.loader-monogram {
+  font-family: var(--font-serif);
+  font-size: clamp(38px, 6vw, 56px);
+  color: var(--gold-300);
+  letter-spacing: 0.15em;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  animation: monogramPulse 2s infinite ease-in-out;
+}
+
+.loader-heart {
+  color: var(--sage-400);
+  font-size: 0.75em;
+  animation: heartSubtle 1.4s infinite alternate ease-in-out;
+}
+
+.loader-ring {
+  width: 90px;
+  height: 90px;
+  border: 1px dashed var(--border-gold);
+  border-radius: 50%;
+  position: absolute;
+  animation: spinSlow 18s linear infinite;
+}
+
+@keyframes spinSlow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes monogramPulse {
+  0%, 100% { opacity: 0.8; transform: scale(0.98); }
+  50% { opacity: 1; transform: scale(1.02); }
+}
+
+@keyframes heartSubtle {
+  0% { transform: scale(0.9); opacity: 0.7; }
+  100% { transform: scale(1.15); opacity: 1; filter: drop-shadow(0 0 10px rgba(157, 212, 183, 0.6)); }
+}
+
+/* --- 4. SECTION 1: CINEMATIC ENTRANCE SCREEN --- */
+.entrance-screen {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-modal);
+  background: radial-gradient(circle at center, #071f13 0%, var(--bg-950) 80%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1), transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow: hidden;
+}
+
+.entrance-screen.dismissed {
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(1.05);
+}
+
+.entrance-light-aura {
+  position: absolute;
+  width: min(700px, 90vw);
+  height: min(700px, 90vw);
+  background: radial-gradient(circle, rgba(226, 192, 105, 0.16) 0%, rgba(20, 60, 37, 0.25) 50%, transparent 75%);
+  filter: blur(60px);
+  pointer-events: none;
+  animation: auraFloat 8s ease-in-out infinite alternate;
+}
+
+@keyframes auraFloat {
+  0% { transform: translate(-20px, -20px) scale(0.95); opacity: 0.7; }
+  100% { transform: translate(20px, 20px) scale(1.05); opacity: 1; }
+}
+
+.entrance-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 620px;
+}
+
+.entrance-portrait-wrap {
+  width: 170px;
+  height: 170px;
+  margin: 0 auto 30px;
+  border-radius: 50%;
+  padding: 3px;
+  background: linear-gradient(135deg, var(--gold-400), var(--sage-400), transparent);
+  box-shadow: 0 0 45px rgba(226, 192, 105, 0.3);
+  opacity: 0;
+  animation: fadeInSoft 1.6s 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.entrance-portrait {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  mask-image: radial-gradient(circle, black 65%, rgba(0,0,0,0.8) 85%, transparent 100%);
+  -webkit-mask-image: radial-gradient(circle, black 65%, rgba(0,0,0,0.8) 85%, transparent 100%);
+}
+
+.entrance-kicker {
+  opacity: 0;
+  animation: fadeInSoft 1.2s 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.entrance-title {
+  font-family: var(--font-serif);
+  font-size: clamp(34px, 5.5vw, 54px);
+  color: var(--ivory-100);
+  line-height: 1.15;
+  margin: 18px 0 16px;
+  opacity: 0;
+  animation: fadeInSoft 1.4s 1.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.entrance-sub {
+  color: var(--text-muted);
+  font-size: clamp(15px, 2.2vw, 17px);
+  line-height: 1.7;
+  margin-bottom: 34px;
+  white-space: pre-line;
+  opacity: 0;
+  animation: fadeInSoft 1.4s 2.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.entrance-btn-wrap {
+  opacity: 0;
+  animation: fadeInSoft 1.4s 2.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes fadeInSoft {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- 5. SECTION 8: CONSTELLATION COMPONENT --- */
+.constellation-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 860px;
+  margin: 40px auto 0;
+  background: radial-gradient(circle at center, rgba(16, 44, 28, 0.7) 0%, rgba(4, 14, 8, 0.95) 75%);
+  border: 1px solid var(--border-gold);
+  border-radius: var(--radius-xl);
+  padding: clamp(30px, 5vw, 60px) clamp(20px, 4vw, 40px);
+  box-shadow: var(--shadow-deep);
+  overflow: hidden;
+}
+
+.constellation-sky {
+  position: relative;
+  width: 100%;
+  height: clamp(300px, 45vw, 440px);
+}
+
+.constellation-svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.constellation-line {
+  stroke: rgba(226, 192, 105, 0.3);
+  stroke-width: 1.5;
+  stroke-dasharray: 4 4;
+  transition: stroke 0.4s ease, stroke-width 0.4s ease;
+}
+
+.constellation-line.active {
+  stroke: var(--gold-400);
+  stroke-width: 2.5;
+  stroke-dasharray: none;
+  filter: drop-shadow(0 0 6px var(--gold-glow));
+}
+
+.constellation-node {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  width: 44px;
+  height: 44px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  transition: transform var(--duration-fast) var(--ease-spring);
+  -webkit-tap-highlight-color: transparent;
+}
+
+.constellation-node:focus-visible {
+  outline: 2px solid var(--gold-400);
+  outline-offset: 4px;
+}
+
+.node-dot {
+  width: 14px;
+  height: 14px;
+  background: var(--gold-400);
+  border-radius: 50%;
+  border: 2px solid var(--bg-950);
+  box-shadow: 0 0 14px var(--gold-glow);
+  transition: transform var(--duration-fast) var(--ease-spring), background var(--duration-fast);
+}
+
+.constellation-node:hover .node-dot,
+.constellation-node.active .node-dot {
+  transform: scale(1.6);
+  background: #ffffff;
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.9), 0 0 40px var(--gold-glow);
+}
+
+.node-halo {
+  position: absolute;
+  inset: 4px;
+  border-radius: 50%;
+  border: 1px solid rgba(226, 192, 105, 0.35);
+  animation: haloPulse 3s infinite ease-out;
+}
+
+@keyframes haloPulse {
+  0% { transform: scale(0.8); opacity: 0.8; }
+  100% { transform: scale(1.8); opacity: 0; }
+}
+
+.constellation-info {
+  margin-top: 30px;
+  padding: 24px;
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-green);
+  text-align: center;
+  min-height: 110px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: all var(--duration-normal) var(--ease-cinematic);
+}
+
+.constellation-node-title {
+  font-family: var(--font-serif);
+  font-size: clamp(22px, 3vw, 28px);
+  color: var(--gold-300);
+  margin-bottom: 6px;
+}
+
+.constellation-node-desc {
+  color: var(--text-muted);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* --- 6. SECTION 9: SCRATCH REVEAL COMPONENT --- */
+.scratch-container {
+  position: relative;
+  max-width: 680px;
+  margin: 40px auto 0;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  border: 1px solid var(--border-gold);
+  box-shadow: var(--shadow-deep);
+  background: linear-gradient(145deg, #0e291a 0%, #06140c 100%);
+  user-select: none;
+}
+
+.scratch-hidden-content {
+  padding: clamp(48px, 7vw, 75px) clamp(28px, 6vw, 55px);
+  text-align: center;
+}
+
+.scratch-hidden-title {
+  font-family: var(--font-serif);
+  font-size: clamp(32px, 4vw, 44px);
+  color: var(--gold-300);
+  margin-bottom: 20px;
+}
+
+.scratch-hidden-body {
+  font-family: var(--font-serif);
+  font-size: clamp(22px, 2.8vw, 30px);
+  line-height: 1.65;
+  color: var(--mint-100);
+  font-style: italic;
+}
+
+.scratch-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  cursor: grab;
+  touch-action: none;
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.scratch-canvas.fade-out {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.scratch-canvas:active {
+  cursor: grabbing;
+}
+
+.scratch-instruction {
+  text-align: center;
+  margin-top: 16px;
+  font-size: 13px;
+  letter-spacing: 0.15em;
+  color: var(--gold-400);
+  text-transform: uppercase;
+}
+
+/* --- 7. SECTION 11: HEARTBEAT SENSOR COMPONENT --- */
+.heartbeat-wrap {
+  max-width: 640px;
+  margin: 48px auto 0;
+  text-align: center;
+  position: relative;
+}
+
+.heartbeat-btn {
+  position: relative;
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #256a44 0%, #0c2b18 80%);
+  border: 2px solid var(--gold-400);
+  color: var(--gold-300);
+  font-size: 40px;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  margin: 0 auto;
+  box-shadow: 0 0 35px var(--green-glow), 0 10px 30px rgba(0,0,0,0.6);
+  touch-action: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s;
+}
+
+.heartbeat-btn:focus-visible {
+  outline: 2px solid var(--gold-400);
+  outline-offset: 6px;
+}
+
+.heartbeat-pulse-ring {
+  position: absolute;
+  inset: -14px;
+  border-radius: 50%;
+  border: 1.5px solid var(--gold-400);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.heartbeat-btn.holding .heartbeat-pulse-ring {
+  animation: heartRings 1.2s infinite cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+@keyframes heartRings {
+  0% { transform: scale(0.9); opacity: 0.8; }
+  100% { transform: scale(1.6); opacity: 0; }
+}
+
+.heartbeat-progress {
+  width: 100%;
+  max-width: 260px;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-full);
+  margin: 30px auto 0;
+  overflow: hidden;
+}
+
+.heartbeat-progress-bar {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, var(--sage-400), var(--gold-400));
+  transition: width 0.1s linear;
+}
+
+.heartbeat-reveal-card {
+  margin-top: 36px;
+  padding: 30px;
+  background: rgba(16, 44, 28, 0.7);
+  border: 1px solid var(--border-gold);
+  border-radius: var(--radius-lg);
+  backdrop-filter: blur(16px);
+  opacity: 0;
+  transform: translateY(16px);
+  transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  pointer-events: none;
+}
+
+.heartbeat-reveal-card.revealed {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.heartbeat-reveal-text {
+  font-family: var(--font-serif);
+  font-size: clamp(22px, 3vw, 32px);
+  line-height: 1.55;
+  color: var(--mint-100);
+  font-style: italic;
+}
+
+/* --- 8. ACCESSIBLE LIGHTBOX MODAL --- */
+.lightbox-dialog {
+  border: none;
+  background: transparent;
+  padding: 0;
+  max-width: 100vw;
+  max-height: 100vh;
+  margin: auto;
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-modal);
+  display: grid;
+  place-items: center;
+}
+
+.lightbox-dialog:not([open]) {
+  display: none;
+}
+
+.lightbox-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(3, 10, 6, 0.94);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+.lightbox-content {
+  position: relative;
+  z-index: 2;
+  max-width: min(92vw, 1040px);
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px;
+}
+
+.lightbox-image-wrap {
+  max-width: 100%;
+  max-height: 75vh;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid var(--border-gold);
+  box-shadow: var(--shadow-deep);
+}
+
+.lightbox-img {
+  max-width: 100%;
+  max-height: 75vh;
+  object-fit: contain;
+  display: block;
+}
+
+.lightbox-caption {
+  margin-top: 16px;
+  font-family: var(--font-serif);
+  font-size: clamp(20px, 2.5vw, 26px);
+  color: var(--mint-100);
+  font-style: italic;
+  text-align: center;
+}
+
+.lightbox-close-btn {
+  position: absolute;
+  top: -12px;
+  right: -12px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--bg-card);
+  border: 1px solid var(--border-gold);
+  color: var(--ivory-100);
+  font-size: 20px;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.6);
+  transition: all var(--duration-fast);
+}
+
+.lightbox-close-btn:hover {
+  background: var(--emerald-600);
+  color: #fff;
+  transform: scale(1.1);
+}
+
+.lightbox-nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: rgba(4, 14, 8, 0.85);
+  border: 1px solid var(--border-green);
+  color: var(--ivory-100);
+  font-size: 22px;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  backdrop-filter: blur(10px);
+  transition: all var(--duration-fast);
+}
+
+.lightbox-nav-btn:hover {
+  background: var(--emerald-700);
+  border-color: var(--gold-400);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.lightbox-nav-prev { left: -20px; }
+.lightbox-nav-next { right: -20px; }
+
+/* --- 9. CELEBRATION CLIMAX CANVAS & BANNER --- */
+.celebration-canvas {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 900;
+  display: none;
+}
+
+.celebration-canvas.active {
+  display: block;
+}
+
+.celebration-banner {
+  margin-top: 36px;
+  padding: 30px;
+  background: linear-gradient(135deg, rgba(226, 192, 105, 0.16) 0%, rgba(18, 48, 29, 0.85) 100%);
+  border: 2px solid var(--gold-400);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-gold), var(--shadow-deep);
+  animation: celebrationBloom 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes celebrationBloom {
+  0% { transform: scale(0.9); opacity: 0; filter: blur(10px); }
+  100% { transform: scale(1); opacity: 1; filter: blur(0); }
+}
+
+.celebration-names {
+  font-family: var(--font-serif);
+  font-size: clamp(38px, 6vw, 68px);
+  color: var(--gold-300);
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.celebration-title {
+  font-family: var(--font-serif);
+  font-size: clamp(24px, 3.5vw, 42px);
+  color: var(--ivory-100);
+  font-style: italic;
+  margin-bottom: 12px;
+}
+
+.celebration-blessing {
+  font-size: 15px;
+  letter-spacing: 0.28em;
+  color: var(--sage-400);
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+/* --- 10. HUG MESSAGE CARD --- */
+.hug-card {
+  margin-top: 28px;
+  padding: 24px 32px;
+  background: rgba(16, 44, 28, 0.85);
+  border: 1px solid var(--border-green);
+  border-radius: var(--radius-lg);
+  display: inline-block;
+  backdrop-filter: blur(12px);
+  box-shadow: var(--shadow-card);
+  animation: fadeInSoft 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hug-deal {
+  font-family: var(--font-serif);
+  font-size: 32px;
+  color: var(--gold-300);
+  margin-bottom: 8px;
+}
+
+.hug-sub {
+  color: var(--mint-100);
+  font-size: 16px;
+  font-style: italic;
+}
