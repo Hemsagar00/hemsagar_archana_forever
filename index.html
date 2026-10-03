@@ -3,29 +3,36 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
-  <title>Hemsagar ❤️ Archana — The Universe of Us</title>
-  <meta name="description" content="An interactive romantic universe, celestial star map, polaroid scrapbook, and proposal keepsake created by Hemsagar for Archana." />
-  <meta name="theme-color" content="#0a0407" />
+  <title>Hemsagar ❤️ Archana — Blessed by Lord Sri Krishna 🦚</title>
+  <meta name="description" content="A divine romantic universe and sacred proposal keepsake created with eternal devotion by Hemsagar for Archana, under the divine grace of Lord Sri Krishna." />
+  <meta name="theme-color" content="#07170f" />
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Great+Vibes&family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,600;1,400&family=Sacramento&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Great+Vibes&family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,600;1,400&family=Sacramento&family=Rozha+One&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      --bg: #090306;
-      --bg-card: rgba(26, 10, 18, 0.75);
-      --wine: #5b1527;
-      --wine-deep: #2e0913;
-      --rose: #e6b2ba;
-      --rose-light: #fcecef;
-      --gold: #dfbd7c;
-      --gold-light: #f7e2b2;
-      --gold-glow: rgba(223, 189, 124, 0.35);
-      --ivory: #fff9f2;
-      --muted: #cfbebe;
-      --border-gold: rgba(223, 189, 124, 0.3);
+      /* Sacred Vrindavan Green & Temple Gold Palette */
+      --bg: #06140c;
+      --bg-card: rgba(14, 34, 23, 0.78);
+      --green-dark: #0a2114;
+      --green-forest: #123621;
+      --green-emerald: #1c5234;
+      --green-sage: #9dd4b7;
+      --green-light: #c4ecd6;
+      --green-mint: #e4f7ed;
+      --peacock-teal: #1e705b;
+      --peacock-blue: #14595e;
+      --gold: #e2c069;
+      --gold-light: #f7e6b8;
+      --gold-glow: rgba(226, 192, 105, 0.38);
+      --green-glow: rgba(157, 212, 183, 0.3);
+      --ivory: #f8fbf9;
+      --muted: #b5cebf;
+      --border-gold: rgba(226, 192, 105, 0.35);
+      --border-green: rgba(157, 212, 183, 0.28);
       --border-subtle: rgba(255, 255, 255, 0.12);
     }
 
@@ -34,7 +41,7 @@
     body {
       background-color: var(--bg);
       background-image: 
-        radial-gradient(circle at 50% 0%, #461424 0%, #15080f 40%, #090306 90%);
+        radial-gradient(circle at 50% 0%, #174229 0%, #0c2617 38%, #06140c 90%);
       color: var(--ivory);
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
       overflow-x: hidden;
@@ -44,7 +51,7 @@
       -webkit-user-select: none;
     }
 
-    /* Interactive Celestial Canvas */
+    /* Ambient Celestial & Starfield Canvas */
     #celestialCanvas {
       position: fixed;
       inset: 0;
@@ -52,7 +59,7 @@
       z-index: 1;
     }
 
-    /* Ambient Audio Badge */
+    /* Sacred Flute / Divine Melody Audio Badge */
     .audio-badge {
       position: fixed;
       top: 22px;
@@ -61,24 +68,25 @@
       display: inline-flex;
       align-items: center;
       gap: 10px;
-      padding: 10px 18px;
-      background: rgba(22, 8, 14, 0.85);
+      padding: 10px 20px;
+      background: rgba(10, 30, 18, 0.88);
       border: 1px solid var(--border-gold);
       border-radius: 999px;
       backdrop-filter: blur(16px);
       color: var(--gold-light);
       font-size: 11px;
-      font-weight: 500;
+      font-weight: 600;
       letter-spacing: 0.14em;
       text-transform: uppercase;
       cursor: pointer;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.6), 0 0 20px var(--gold-glow);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.6), 0 0 25px var(--green-glow);
       transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
     }
     .audio-badge:hover {
       transform: translateY(-2px) scale(1.03);
       border-color: var(--gold);
-      background: rgba(35, 12, 23, 0.95);
+      background: rgba(16, 46, 28, 0.95);
+      box-shadow: 0 12px 35px rgba(0,0,0,0.7), 0 0 30px var(--gold-glow);
     }
     .audio-bars {
       display: flex;
@@ -102,11 +110,11 @@
       100% { height: 14px; }
     }
 
-    /* Grand Entrance Modal */
+    /* Grand Royal Entrance Modal */
     .entrance-modal {
       position: fixed;
       inset: 0;
-      background: radial-gradient(circle at 50% 40%, #2f0b18 0%, #090306 85%);
+      background: radial-gradient(circle at 50% 40%, #153c26 0%, #06140c 85%);
       z-index: 10000;
       display: grid;
       place-items: center;
@@ -119,37 +127,55 @@
       pointer-events: none;
     }
     .entrance-card {
-      max-width: 560px;
+      max-width: 580px;
       width: 100%;
-      background: linear-gradient(145deg, rgba(46, 14, 28, 0.85), rgba(15, 6, 11, 0.98));
+      background: linear-gradient(145deg, rgba(16, 44, 28, 0.9), rgba(6, 20, 12, 0.98));
       border: 1px solid var(--border-gold);
       border-radius: 34px;
       padding: clamp(38px, 6vw, 64px) clamp(24px, 5vw, 46px);
       text-align: center;
-      box-shadow: 0 40px 100px rgba(0,0,0,0.85), 0 0 60px rgba(91, 21, 39, 0.45);
+      box-shadow: 0 40px 100px rgba(0,0,0,0.85), 0 0 60px var(--green-glow);
       position: relative;
     }
     .entrance-card::before {
       content: "";
       position: absolute;
       inset: 12px;
-      border: 1px solid rgba(223, 189, 124, 0.22);
+      border: 1px solid rgba(226, 192, 105, 0.25);
       border-radius: 24px;
       pointer-events: none;
     }
+    .entrance-avatar-wrap {
+      width: 125px;
+      height: 125px;
+      margin: 0 auto 16px;
+      border-radius: 50%;
+      padding: 3.5px;
+      background: linear-gradient(135deg, var(--gold), var(--green-sage), var(--gold-light));
+      box-shadow: 0 0 35px var(--green-glow), 0 10px 25px rgba(0,0,0,0.6);
+    }
+    .entrance-avatar {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      display: block;
+      border: 2px solid #06140c;
+    }
     .entrance-monogram {
       font-family: 'Great Vibes', cursive;
-      font-size: 56px;
+      font-size: 54px;
       color: var(--gold-light);
       margin-bottom: 6px;
-      filter: drop-shadow(0 0 15px rgba(223, 189, 124, 0.4));
+      filter: drop-shadow(0 0 15px rgba(226, 192, 105, 0.45));
     }
     .entrance-eyebrow {
       font-size: 11px;
       letter-spacing: 0.35em;
       text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 18px;
+      color: var(--green-light);
+      margin-bottom: 16px;
+      font-weight: 500;
     }
     .entrance-title {
       font-family: 'Cormorant Garamond', Georgia, serif;
@@ -160,7 +186,7 @@
     }
     .entrance-desc {
       color: var(--muted);
-      font-size: 15px;
+      font-size: 15.5px;
       line-height: 1.7;
       margin-bottom: 34px;
     }
@@ -168,21 +194,21 @@
       display: inline-flex;
       align-items: center;
       gap: 12px;
-      background: linear-gradient(135deg, #fff9f2 0%, #f3decb 100%);
-      color: #2b0e16;
+      background: linear-gradient(135deg, #f7fbf8 0%, #c4ecd6 100%);
+      color: #0b2918;
       border: 0;
       border-radius: 999px;
       padding: 16px 38px;
       font-family: 'Inter', sans-serif;
       font-size: 15px;
-      font-weight: 600;
+      font-weight: 700;
       cursor: pointer;
-      box-shadow: 0 15px 40px rgba(255, 249, 242, 0.25), 0 0 30px var(--gold-glow);
+      box-shadow: 0 15px 40px rgba(196, 236, 214, 0.3), 0 0 30px var(--gold-glow);
       transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
     }
     .entrance-btn:hover {
       transform: translateY(-3px) scale(1.04);
-      box-shadow: 0 20px 50px rgba(255, 249, 242, 0.4), 0 0 45px rgba(223, 189, 124, 0.6);
+      box-shadow: 0 20px 50px rgba(196, 236, 214, 0.45), 0 0 45px var(--gold-glow);
     }
 
     /* Main Sections */
@@ -194,7 +220,7 @@
     .kicker {
       display: inline-block;
       color: var(--gold);
-      font-size: 11px;
+      font-size: 11.5px;
       font-weight: 600;
       letter-spacing: 0.35em;
       text-transform: uppercase;
@@ -213,7 +239,7 @@
       color: var(--muted);
       font-size: 17px;
       line-height: 1.7;
-      max-width: 660px;
+      max-width: 680px;
       margin: 0 auto 40px;
     }
 
@@ -229,7 +255,7 @@
       position: absolute;
       width: min(850px, 94vw);
       height: min(850px, 94vw);
-      background: radial-gradient(circle, rgba(230, 178, 186, 0.16) 0%, rgba(91, 21, 39, 0.28) 45%, transparent 72%);
+      background: radial-gradient(circle, rgba(157, 212, 183, 0.2) 0%, rgba(20, 60, 37, 0.32) 45%, transparent 72%);
       filter: blur(50px);
       pointer-events: none;
       animation: breathe 7s ease-in-out infinite;
@@ -244,24 +270,32 @@
       padding: clamp(48px, 8vw, 95px) clamp(24px, 7vw, 85px);
       border: 1px solid var(--border-gold);
       border-radius: 36px;
-      background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(38, 14, 24, 0.5) 50%, rgba(16, 7, 11, 0.85) 100%);
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(18, 48, 29, 0.6) 50%, rgba(6, 20, 12, 0.9) 100%);
       backdrop-filter: blur(24px);
       -webkit-backdrop-filter: blur(24px);
       box-shadow: 
-        0 40px 120px rgba(0, 0, 0, 0.65),
-        inset 0 1px 1px rgba(255, 255, 255, 0.2),
-        0 0 80px rgba(91, 21, 39, 0.35);
+        0 40px 120px rgba(0, 0, 0, 0.7),
+        inset 0 1px 1px rgba(255, 255, 255, 0.25),
+        0 0 80px rgba(28, 82, 52, 0.4);
       text-align: center;
       overflow: hidden;
     }
+    .hero-card::before {
+      content: "";
+      position: absolute;
+      inset: 14px;
+      border: 1px solid rgba(226, 192, 105, 0.24);
+      border-radius: 26px;
+      pointer-events: none;
+    }
     .hero-couple-avatar-wrap {
-      width: 150px;
-      height: 150px;
+      width: 155px;
+      height: 155px;
       margin: 0 auto 24px;
       border-radius: 50%;
       padding: 4px;
-      background: linear-gradient(135deg, var(--gold), var(--rose), var(--gold-light));
-      box-shadow: 0 0 40px var(--gold-glow), 0 12px 35px rgba(0,0,0,0.6);
+      background: linear-gradient(135deg, var(--gold), var(--green-sage), var(--gold-light));
+      box-shadow: 0 0 40px var(--green-glow), 0 12px 35px rgba(0,0,0,0.65);
       animation: avatarFloat 4.5s ease-in-out infinite;
     }
     @keyframes avatarFloat {
@@ -274,57 +308,15 @@
       border-radius: 50%;
       object-fit: cover;
       display: block;
-      border: 3px solid #090306;
-    }
-    .entrance-avatar-wrap {
-      width: 120px;
-      height: 120px;
-      margin: 0 auto 16px;
-      border-radius: 50%;
-      padding: 3.5px;
-      background: linear-gradient(135deg, var(--gold), var(--rose), var(--gold-light));
-      box-shadow: 0 0 30px var(--gold-glow), 0 10px 25px rgba(0,0,0,0.6);
-    }
-    .entrance-avatar {
-      width: 100%;
-      height: 100%;
-      border-radius: 50%;
-      object-fit: cover;
-      display: block;
-      border: 2px solid #090306;
-    }
-    .cert-avatar-wrap {
-      width: 110px;
-      height: 110px;
-      margin: 0 auto 18px;
-      border-radius: 50%;
-      padding: 3.5px;
-      background: linear-gradient(135deg, var(--gold), var(--rose), var(--gold));
-      box-shadow: 0 0 30px var(--gold-glow);
-    }
-    .cert-avatar {
-      width: 100%;
-      height: 100%;
-      border-radius: 50%;
-      object-fit: cover;
-      display: block;
-      border: 2px solid #090306;
-    }
-    .hero-card::before {
-      content: "";
-      position: absolute;
-      inset: 14px;
-      border: 1px solid rgba(223, 189, 124, 0.22);
-      border-radius: 26px;
-      pointer-events: none;
+      border: 3px solid #06140c;
     }
     .eyebrow {
       font-size: 11px;
       letter-spacing: 0.4em;
       text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 28px;
-      font-weight: 500;
+      color: var(--green-light);
+      margin-bottom: 24px;
+      font-weight: 600;
     }
     .names {
       font-family: 'Cormorant Garamond', Georgia, serif;
@@ -333,22 +325,22 @@
       margin: 0;
       font-weight: 600;
       letter-spacing: -0.04em;
-      text-shadow: 0 10px 40px rgba(0,0,0,0.5);
+      text-shadow: 0 10px 40px rgba(0,0,0,0.6);
     }
     .names span { display: block; }
     .amp {
       font-size: 0.52em;
-      color: var(--rose);
+      color: var(--green-sage);
       font-style: italic;
       font-family: 'Playfair Display', serif;
       margin: 0.12em 0;
-      filter: drop-shadow(0 0 15px rgba(230, 178, 186, 0.4));
+      filter: drop-shadow(0 0 15px rgba(157, 212, 183, 0.5));
     }
     .subtitle {
       font-family: 'Cormorant Garamond', Georgia, serif;
       font-size: clamp(22px, 3.2vw, 36px);
-      color: #ede0de;
-      margin: 32px auto 10px;
+      color: #e5f4ec;
+      margin: 30px auto 10px;
       font-style: italic;
       font-weight: 400;
     }
@@ -358,10 +350,10 @@
       letter-spacing: 0.28em;
       text-transform: uppercase;
       color: var(--gold-light);
-      padding: 6px 20px;
-      background: rgba(223, 189, 124, 0.08);
+      padding: 6px 22px;
+      background: rgba(226, 192, 105, 0.1);
       border-radius: 999px;
-      border: 1px solid rgba(223, 189, 124, 0.2);
+      border: 1px solid rgba(226, 192, 105, 0.25);
       margin-top: 14px;
     }
     .scroll-down {
@@ -369,19 +361,19 @@
       display: inline-flex;
       gap: 12px;
       align-items: center;
-      color: var(--gold-light);
+      color: var(--green-light);
       text-decoration: none;
       font-size: 12px;
       letter-spacing: 0.15em;
       text-transform: uppercase;
-      font-weight: 500;
+      font-weight: 600;
       transition: all 0.3s ease;
     }
     .scroll-down:hover { transform: translateY(3px); color: #fff; }
     .mouse-icon {
       width: 24px;
       height: 38px;
-      border: 1px solid rgba(223, 189, 124, 0.4);
+      border: 1px solid var(--border-green);
       border-radius: 16px;
       position: relative;
     }
@@ -402,7 +394,7 @@
       100% { transform: translate(-50%, 14px); opacity: 0; }
     }
 
-    /* OPTION 2: DESTINY DATE SECTION */
+    /* DESTINY DATE SECTION */
     .destiny-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -410,8 +402,8 @@
       margin-top: 40px;
     }
     .destiny-card {
-      background: linear-gradient(145deg, rgba(255, 255, 255, 0.04), rgba(46, 14, 26, 0.35));
-      border: 1px solid var(--border-gold);
+      background: linear-gradient(145deg, rgba(255, 255, 255, 0.04), rgba(16, 48, 28, 0.4));
+      border: 1px solid var(--border-green);
       border-radius: 24px;
       padding: 34px 22px;
       text-align: center;
@@ -423,10 +415,10 @@
     .destiny-card:hover {
       transform: translateY(-6px);
       border-color: var(--gold);
-      box-shadow: 0 16px 45px rgba(0,0,0,0.55), 0 0 25px var(--gold-glow);
+      box-shadow: 0 16px 45px rgba(0,0,0,0.55), 0 0 25px var(--green-glow);
     }
     .destiny-icon {
-      font-size: 34px;
+      font-size: 36px;
       margin-bottom: 14px;
       display: inline-block;
     }
@@ -434,9 +426,9 @@
       font-size: 11px;
       text-transform: uppercase;
       letter-spacing: 0.22em;
-      color: var(--gold);
+      color: var(--green-light);
       margin-bottom: 8px;
-      font-weight: 500;
+      font-weight: 600;
     }
     .destiny-val {
       font-family: 'Cormorant Garamond', Georgia, serif;
@@ -453,7 +445,7 @@
     .destiny-stamp-box {
       margin-top: 36px;
       padding: 24px 30px;
-      background: rgba(223, 189, 124, 0.05);
+      background: rgba(157, 212, 183, 0.06);
       border: 1px dashed var(--border-gold);
       border-radius: 24px;
       display: inline-flex;
@@ -462,7 +454,7 @@
       gap: 12px;
     }
     .destiny-stamp-btn {
-      background: linear-gradient(135deg, rgba(223, 189, 124, 0.2), rgba(91, 21, 39, 0.45));
+      background: linear-gradient(135deg, rgba(226, 192, 105, 0.2), rgba(28, 82, 52, 0.5));
       border: 1px solid var(--gold);
       color: var(--gold-light);
       padding: 11px 26px;
@@ -475,7 +467,7 @@
     }
     .destiny-stamp-btn:hover {
       background: var(--gold);
-      color: #2b0e16;
+      color: #0b2918;
       box-shadow: 0 0 25px var(--gold-glow);
     }
     .destiny-status-label {
@@ -493,11 +485,11 @@
       position: relative;
       width: 100%;
       height: 480px;
-      background: radial-gradient(circle at 50% 50%, rgba(46, 12, 24, 0.4) 0%, rgba(9, 3, 6, 0.95) 80%);
-      border: 1px solid var(--border-gold);
+      background: radial-gradient(circle at 50% 50%, rgba(20, 60, 36, 0.45) 0%, rgba(6, 20, 12, 0.95) 80%);
+      border: 1px solid var(--border-green);
       border-radius: 32px;
       overflow: hidden;
-      box-shadow: 0 25px 70px rgba(0,0,0,0.6);
+      box-shadow: 0 25px 70px rgba(0,0,0,0.65);
       margin-top: 40px;
     }
     #interactiveSky {
@@ -513,21 +505,21 @@
       font-size: 11px;
       text-transform: uppercase;
       letter-spacing: 0.22em;
-      color: var(--gold-light);
-      background: rgba(10, 4, 7, 0.7);
-      padding: 6px 16px;
+      color: var(--green-light);
+      background: rgba(6, 20, 12, 0.8);
+      padding: 6px 18px;
       border-radius: 999px;
-      border: 1px solid rgba(223, 189, 124, 0.2);
+      border: 1px solid var(--border-gold);
       pointer-events: none;
     }
     .milestone-badge {
       position: absolute;
-      background: rgba(22, 8, 15, 0.9);
+      background: rgba(10, 32, 19, 0.94);
       border: 1px solid var(--gold);
-      padding: 10px 16px;
+      padding: 10px 18px;
       border-radius: 14px;
       pointer-events: none;
-      font-size: 13px;
+      font-size: 13.5px;
       color: var(--ivory);
       transform: translate(-50%, -125%);
       box-shadow: 0 10px 25px rgba(0,0,0,0.8), 0 0 20px var(--gold-glow);
@@ -549,7 +541,7 @@
     }
     .polaroid-card {
       width: 290px;
-      background: #fbf9f5;
+      background: #fdfefd;
       padding: 16px 16px 26px;
       border-radius: 6px;
       box-shadow: 0 15px 35px rgba(0,0,0,0.5), 0 3px 10px rgba(0,0,0,0.3);
@@ -563,7 +555,7 @@
     .polaroid-card:nth-child(3) { transform: rotate(-1.5deg); }
     .polaroid-card:hover {
       transform: scale(1.06) rotate(0deg) translateY(-14px) !important;
-      box-shadow: 0 25px 60px rgba(0,0,0,0.8), 0 0 30px rgba(223, 189, 124, 0.3);
+      box-shadow: 0 25px 60px rgba(0,0,0,0.8), 0 0 30px var(--green-glow);
       z-index: 5;
     }
     .washi-tape {
@@ -573,7 +565,7 @@
       transform: translateX(-50%);
       width: 90px;
       height: 26px;
-      background: rgba(223, 189, 124, 0.45);
+      background: rgba(157, 212, 183, 0.45);
       backdrop-filter: blur(4px);
       box-shadow: 0 2px 5px rgba(0,0,0,0.15);
       border-left: 2px dashed rgba(255,255,255,0.4);
@@ -583,7 +575,7 @@
     .polaroid-img-wrap {
       width: 100%;
       aspect-ratio: 1 / 1.08;
-      background: #12060b;
+      background: #081a10;
       overflow: hidden;
       border-radius: 4px;
       position: relative;
@@ -602,24 +594,25 @@
       margin-top: 14px;
       font-family: 'Sacramento', cursive;
       font-size: 26px;
-      color: #2b111a;
+      color: #0d301b;
       text-align: center;
       line-height: 1.2;
     }
     .polaroid-date {
-      font-size: 9px;
+      font-size: 10px;
       text-transform: uppercase;
       letter-spacing: 0.16em;
-      color: #7b6268;
+      color: #2b6d47;
       text-align: center;
       margin-top: 4px;
       font-family: 'Inter', sans-serif;
+      font-weight: 500;
     }
     .polaroid-upload-btn {
       position: absolute;
       top: 24px;
       right: 24px;
-      background: rgba(0,0,0,0.7);
+      background: rgba(8, 26, 16, 0.78);
       color: var(--gold-light);
       border: 1px solid var(--border-gold);
       padding: 6px 12px;
@@ -637,19 +630,19 @@
     }
     .scratch-card-box {
       position: relative;
-      width: min(520px, 92vw);
-      height: 280px;
+      width: min(540px, 92vw);
+      height: 290px;
       margin: 40px auto 0;
       border-radius: 28px;
       border: 2px solid var(--gold);
-      box-shadow: 0 25px 70px rgba(0,0,0,0.7), 0 0 45px rgba(223, 189, 124, 0.25);
+      box-shadow: 0 25px 70px rgba(0,0,0,0.7), 0 0 45px var(--green-glow);
       overflow: hidden;
-      background: linear-gradient(135deg, #3b0f1d 0%, #15060d 100%);
+      background: linear-gradient(135deg, #103420 0%, #06180e 100%);
       display: grid;
       place-items: center;
     }
     .scratch-secret-message {
-      padding: 30px;
+      padding: 32px 28px;
       text-align: center;
       position: relative;
       z-index: 1;
@@ -658,14 +651,14 @@
       font-family: 'Cormorant Garamond', serif;
       font-size: 32px;
       color: var(--gold-light);
-      margin-bottom: 10px;
+      margin-bottom: 12px;
     }
     .scratch-secret-message p {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 24px;
+      font-size: 22px;
       font-style: italic;
-      line-height: 1.5;
-      color: #fff9f2;
+      line-height: 1.55;
+      color: #f7fcf9;
     }
     #scratchCanvas {
       position: absolute;
@@ -679,7 +672,7 @@
       font-size: 12px;
       letter-spacing: 0.22em;
       text-transform: uppercase;
-      color: var(--gold-light);
+      color: var(--green-light);
     }
 
     /* 4. HEARTBEAT TOUCH SENSOR */
@@ -688,17 +681,17 @@
       margin-top: 50px;
     }
     .pulse-ring-btn {
-      width: 90px;
-      height: 90px;
+      width: 92px;
+      height: 92px;
       border-radius: 50%;
-      background: radial-gradient(circle, #7e1e35 0%, #460f1e 100%);
+      background: radial-gradient(circle, #1a5635 0%, #0c2618 100%);
       border: 2px solid var(--gold);
       display: grid;
       place-items: center;
       margin: 20px auto;
-      font-size: 34px;
+      font-size: 36px;
       cursor: pointer;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.6), 0 0 25px rgba(126, 30, 53, 0.6);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.6), 0 0 30px var(--green-glow);
       transition: transform 0.2s ease;
       position: relative;
     }
@@ -706,7 +699,7 @@
       content: "";
       position: absolute;
       inset: -12px;
-      border: 1px solid var(--rose);
+      border: 1px solid var(--green-sage);
       border-radius: 50%;
       animation: heartPulse 1.6s ease-out infinite;
       opacity: 0.6;
@@ -719,7 +712,7 @@
       font-size: 12px;
       letter-spacing: 0.2em;
       text-transform: uppercase;
-      color: var(--muted);
+      color: var(--green-light);
     }
 
     /* 5. PLAYFUL DODGING PROPOSAL ARENA */
@@ -745,7 +738,7 @@
       letter-spacing: -0.03em;
     }
     .proposal-box p {
-      color: #e2d1cf;
+      color: #e0f0e7;
       font-size: clamp(18px, 2.2vw, 22px);
       line-height: 1.75;
       max-width: 700px;
@@ -761,8 +754,8 @@
       margin-top: 40px;
     }
     .yes-proposal-btn {
-      background: linear-gradient(135deg, #fff9f2 0%, #f3decb 100%);
-      color: #2b0e16;
+      background: linear-gradient(135deg, #f7fbf8 0%, #c4ecd6 100%);
+      color: #0b2918;
       border: 0;
       border-radius: 999px;
       padding: 20px 48px;
@@ -770,19 +763,19 @@
       font-size: 17px;
       font-weight: 700;
       cursor: pointer;
-      box-shadow: 0 18px 50px rgba(255, 249, 242, 0.3), 0 0 40px var(--gold-glow);
+      box-shadow: 0 18px 50px rgba(196, 236, 214, 0.35), 0 0 40px var(--gold-glow);
       transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
       letter-spacing: 0.04em;
       z-index: 5;
     }
     .yes-proposal-btn:hover {
       transform: scale(1.08) translateY(-4px);
-      box-shadow: 0 24px 60px rgba(255, 249, 242, 0.45), 0 0 55px rgba(223, 189, 124, 0.8);
+      box-shadow: 0 24px 60px rgba(196, 236, 214, 0.5), 0 0 55px var(--gold-glow);
     }
     .dodge-no-btn {
       background: transparent;
-      color: #d1bfc3;
-      border: 1px solid rgba(255, 255, 255, 0.25);
+      color: var(--green-light);
+      border: 1px solid var(--border-green);
       border-radius: 999px;
       padding: 16px 36px;
       font-family: 'Inter', sans-serif;
@@ -799,7 +792,7 @@
     .certificate-modal {
       position: fixed;
       inset: 0;
-      background: rgba(8, 2, 5, 0.95);
+      background: rgba(5, 18, 11, 0.96);
       backdrop-filter: blur(24px);
       z-index: 10002;
       display: grid;
@@ -816,13 +809,13 @@
     .certificate-frame {
       max-width: 680px;
       width: 100%;
-      background: linear-gradient(145deg, #1f0b14 0%, #0d0408 100%);
+      background: linear-gradient(145deg, #0e291a 0%, #06150c 100%);
       border: 3px double var(--gold);
       border-radius: 28px;
       padding: clamp(36px, 6vw, 60px);
       text-align: center;
       position: relative;
-      box-shadow: 0 40px 120px rgba(0,0,0,0.9), 0 0 80px rgba(223, 189, 124, 0.4);
+      box-shadow: 0 40px 120px rgba(0,0,0,0.9), 0 0 80px var(--green-glow);
     }
     .cert-corner {
       position: absolute;
@@ -835,6 +828,23 @@
     .cert-corner.bl { bottom: 14px; left: 14px; border-right: 0; border-top: 0; }
     .cert-corner.br { bottom: 14px; right: 14px; border-left: 0; border-top: 0; }
 
+    .cert-avatar-wrap {
+      width: 110px;
+      height: 110px;
+      margin: 0 auto 18px;
+      border-radius: 50%;
+      padding: 3.5px;
+      background: linear-gradient(135deg, var(--gold), var(--green-sage), var(--gold));
+      box-shadow: 0 0 30px var(--green-glow);
+    }
+    .cert-avatar {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      display: block;
+      border: 2px solid #06140c;
+    }
     .cert-heading {
       font-family: 'Great Vibes', cursive;
       font-size: 52px;
@@ -845,8 +855,9 @@
       font-size: 11px;
       letter-spacing: 0.38em;
       text-transform: uppercase;
-      color: var(--gold);
+      color: var(--green-light);
       margin-bottom: 24px;
+      font-weight: 600;
     }
     .cert-names {
       font-family: 'Cormorant Garamond', serif;
@@ -858,15 +869,15 @@
     .cert-vow {
       font-family: 'Cormorant Garamond', Georgia, serif;
       font-size: clamp(19px, 2.4vw, 24px);
-      line-height: 1.6;
-      color: #ede0de;
+      line-height: 1.65;
+      color: #e2f2e8;
       font-style: italic;
       margin-bottom: 30px;
     }
     .cert-seal {
-      width: 72px;
-      height: 72px;
-      background: radial-gradient(circle, #892039 0%, #4a0d1d 100%);
+      width: 76px;
+      height: 76px;
+      background: radial-gradient(circle, #1a5635 0%, #0c2618 100%);
       border: 2px solid var(--gold);
       border-radius: 50%;
       margin: 0 auto 20px;
@@ -885,19 +896,19 @@
       margin-top: 10px;
     }
     .cert-btn {
-      background: rgba(223, 189, 124, 0.15);
-      color: var(--gold-light);
+      background: rgba(157, 212, 183, 0.16);
+      color: var(--green-light);
       border: 1px solid var(--border-gold);
-      padding: 12px 26px;
+      padding: 12px 28px;
       border-radius: 999px;
       font-size: 13px;
       font-weight: 600;
       cursor: pointer;
       transition: all 0.25s ease;
     }
-    .cert-btn:hover { background: rgba(223, 189, 124, 0.3); }
+    .cert-btn:hover { background: rgba(157, 212, 183, 0.32); color: #fff; }
 
-    /* Flying Hearts */
+    /* Flying Feathers, Petals & Hearts */
     .heart {
       position: fixed;
       z-index: 1000;
@@ -914,7 +925,7 @@
     footer {
       text-align: center;
       padding: 50px 24px;
-      color: #9c8389;
+      color: #8dafa0;
       font-size: 11px;
       letter-spacing: 0.25em;
       text-transform: uppercase;
@@ -922,7 +933,7 @@
       position: relative;
       z-index: 3;
     }
-    footer span { color: var(--rose); display: inline-block; margin: 0 4px; }
+    footer span { color: var(--gold); display: inline-block; margin: 0 4px; }
   </style>
 </head>
 <body>
@@ -930,15 +941,15 @@
   <!-- Background Particle & Starfield Canvas -->
   <canvas id="celestialCanvas"></canvas>
 
-  <!-- Audio Synthesizer Badge -->
-  <div class="audio-badge" id="audioToggle" title="Click to play romantic ambient melody">
+  <!-- Divine Bansuri Audio Synthesizer Badge -->
+  <div class="audio-badge" id="audioToggle" title="Click to play Lord Krishna's Divine Flute Melody">
     <div class="audio-bars">
       <div class="audio-bar"></div>
       <div class="audio-bar"></div>
       <div class="audio-bar"></div>
       <div class="audio-bar"></div>
     </div>
-    <span id="audioStatusText">Play Our Melody</span>
+    <span id="audioStatusText">🪈 Krishna's Flute</span>
   </div>
 
   <!-- ROYAL ENTRANCE MODAL -->
@@ -947,14 +958,14 @@
       <div class="entrance-avatar-wrap">
         <img src="images/couple.png" alt="Hemsagar & Archana" class="entrance-avatar" />
       </div>
-      <div class="entrance-monogram">H & A</div>
-      <div class="entrance-eyebrow">A Universe Created For Archana</div>
+      <div class="entrance-monogram">Radhe Krishna · H & A 🦚</div>
+      <div class="entrance-eyebrow">A Sacred Universe For Archana · Blessed by Sri Krishna</div>
       <h2 class="entrance-title">Before we step into forever together...</h2>
       <p class="entrance-desc">
-        Put on your earphones 🎧 and step inside our universe. Every star, every memory, and every promise was woven together with eternal love.
+        Put on your earphones 🎧 and step inside our sacred universe. Blessed by the divine love of Radha & Krishna, where every star and every promise was woven for you.
       </p>
       <button class="entrance-btn" id="openSurpriseBtn">
-        <span>Enter Our Universe</span> ✨
+        <span>Enter In Krishna's Grace</span> 🪷
       </button>
     </div>
   </div>
@@ -967,14 +978,14 @@
         <div class="hero-couple-avatar-wrap">
           <img src="images/couple.png" alt="Hemsagar & Archana" class="hero-couple-avatar" />
         </div>
-        <div class="eyebrow">One story · Two hearts · One forever</div>
+        <div class="eyebrow">🦚 Blessed by Lord Sri Krishna · Two Souls · One Forever 🪈</div>
         <h1 class="names">
           <span>Hemsagar</span>
           <span class="amp">&</span>
           <span>Archana</span>
         </h1>
-        <div class="subtitle">Where our stars aligned to write forever.</div>
-        <div class="date-tag">A Love Written In The Heavens</div>
+        <div class="subtitle">A sacred love as eternal and pure as Radha & Krishna.</div>
+        <div class="date-tag">Written In Krishna's Divine Grace · Radhe Radhe</div>
         <div>
           <a class="scroll-down" href="#destinyDate">
             <div class="mouse-icon"></div>
@@ -987,37 +998,37 @@
     <!-- OPTION 2: OUR SACRED DATE: BEING WRITTEN IN THE STARS -->
     <section id="destinyDate">
       <div class="wrap text-center">
-        <div class="kicker">A Sacred Covenant</div>
-        <h2 class="title">Our Date: Being Written In The Stars</h2>
+        <div class="kicker">A Divine Covenant</div>
+        <h2 class="title">Our Sacred Date: Written By Sri Krishna</h2>
         <p class="title-sub">
-          The exact calendar day is currently being woven by destiny, family blessings, and the elders... but my heart made its eternal choice the very moment I saw you.
+          The exact calendar day is currently being woven by destiny, family prayers, and the divine grace of Lord Sri Krishna... but my heart chose you from the very first breath.
         </p>
 
         <div class="destiny-grid">
           <div class="destiny-card">
-            <div class="destiny-icon">🕊️</div>
-            <div class="destiny-tag">Our Muhurtham</div>
+            <div class="destiny-icon">🦚</div>
+            <div class="destiny-tag">Krishna's Blessing</div>
             <div class="destiny-val" id="destinyStatusVal">Awaiting Sacred Muhurtham</div>
-            <div class="destiny-desc">Being calculated with love, auspicious prayers, and two families uniting as one.</div>
+            <div class="destiny-desc">Guided by the flute of Govinda, auspicious prayers, and two families uniting in divine harmony.</div>
           </div>
 
           <div class="destiny-card">
-            <div class="destiny-icon">💍</div>
+            <div class="destiny-icon">🪈</div>
             <div class="destiny-tag">Hemsagar's Vow</div>
             <div class="destiny-val">Decided On Day One</div>
-            <div class="destiny-desc">Any day of any year that brings me you as my wife is already the greatest day of my life.</div>
+            <div class="destiny-desc">Any day of any year that brings me you as my wife is already the greatest blessing from the Lord.</div>
           </div>
 
           <div class="destiny-card">
-            <div class="destiny-icon">👑</div>
-            <div class="destiny-tag">My Only Bride</div>
+            <div class="destiny-icon">🪷</div>
+            <div class="destiny-tag">My Radha, My Bride</div>
             <div class="destiny-val">Archana Forever</div>
-            <div class="destiny-desc">No matter the day or month, there is only one soul destined to walk this lifetime beside me.</div>
+            <div class="destiny-desc">Like Radha to Krishna, there is only one soul destined to walk this lifetime and all eternities beside me.</div>
           </div>
         </div>
 
         <div class="destiny-stamp-box">
-          <div class="destiny-status-label" id="destinyStatusLabel">✨ "The stars are aligning our perfect day..." ✨</div>
+          <div class="destiny-status-label" id="destinyStatusLabel">✨ "Lord Krishna is aligning our perfect Muhurtham..." ✨</div>
           <button class="destiny-stamp-btn" id="stampDateBtn">📅 When Fixed, Tap Here To Stamp Our Date</button>
         </div>
       </div>
@@ -1026,9 +1037,9 @@
     <!-- 1. INTERACTIVE CELESTIAL CONSTELLATION MAP -->
     <section id="constellation">
       <div class="wrap text-center">
-        <div class="kicker">Celestial Milestones</div>
+        <div class="kicker">Vrindavan Constellations</div>
         <h2 class="title">The Stars On The Path To You</h2>
-        <p class="title-sub">Move your cursor or touch the night sky to connect the constellation stars and reveal our sacred moments.</p>
+        <p class="title-sub">Move your cursor or touch the night sky to connect the constellation stars illuminated by Lord Krishna's light.</p>
 
         <div class="constellation-box">
           <canvas id="interactiveSky"></canvas>
@@ -1041,9 +1052,9 @@
     <!-- 2. VINTAGE POLAROID SCRAPBOOK GALLERY -->
     <section id="scrapbook">
       <div class="wrap text-center">
-        <div class="kicker">Frozen In Time</div>
+        <div class="kicker">Blessed Moments</div>
         <h2 class="title">Our Vintage Memories</h2>
-        <p class="title-sub">Our favorite snapshots pinned onto the scrapbook of our lives. Tap any photo to personalize.</p>
+        <p class="title-sub">Our sacred memories pinned onto the scrapbook of our lives. Tap any photo to personalize.</p>
 
         <div class="polaroid-gallery">
           <!-- Polaroid 1: Hemsagar -->
@@ -1054,7 +1065,7 @@
               <img class="polaroid-img" id="polaroidImg1" src="images/hemsagar.jpg" alt="Hemsagar" />
             </div>
             <div class="polaroid-caption">The Man Who Loves You</div>
-            <div class="polaroid-date">Hemsagar · With All My Heart</div>
+            <div class="polaroid-date">Hemsagar · Dedicated In Krishna's Love</div>
             <input type="file" accept="image/*" style="display:none;" id="fileInput1" />
           </div>
 
@@ -1065,8 +1076,8 @@
             <div class="polaroid-img-wrap">
               <img class="polaroid-img" id="polaroidImg2" src="images/archana.jpg" alt="Archana" />
             </div>
-            <div class="polaroid-caption">My Beautiful Queen</div>
-            <div class="polaroid-date">Archana · My Whole World</div>
+            <div class="polaroid-caption">My Radha, My Queen</div>
+            <div class="polaroid-date">Archana · Krishna's Greatest Gift</div>
             <input type="file" accept="image/*" style="display:none;" id="fileInput2" />
           </div>
 
@@ -1077,8 +1088,8 @@
             <div class="polaroid-img-wrap">
               <img class="polaroid-img" id="polaroidImg3" src="images/couple.png" alt="Hemsagar & Archana" />
             </div>
-            <div class="polaroid-caption">Us, Written In The Stars</div>
-            <div class="polaroid-date">Hemsagar & Archana Forever</div>
+            <div class="polaroid-caption">Us, United By Krishna</div>
+            <div class="polaroid-date">Hemsagar & Archana Forever · Radhe Radhe</div>
             <input type="file" accept="image/*" style="display:none;" id="fileInput3" />
           </div>
         </div>
@@ -1088,14 +1099,14 @@
     <!-- 3. INTERACTIVE GOLDEN FOIL SCRATCH CARD -->
     <section class="scratch-section" id="scratchSection">
       <div class="wrap">
-        <div class="kicker">A Hidden Secret</div>
-        <h2 class="title">Scratch To Reveal My Secret</h2>
-        <p class="title-sub">Use your finger or mouse to scratch away the shimmering gold foil and unlock what my heart whispered.</p>
+        <div class="kicker">A Sacred Secret</div>
+        <h2 class="title">Scratch To Reveal My Heart's Prayer</h2>
+        <p class="title-sub">Rub your finger or mouse across the sacred temple gold foil to uncover the whisper of my soul.</p>
 
         <div class="scratch-card-box">
           <div class="scratch-secret-message">
-            <h3>Archana, My Queen</h3>
-            <p>"From the moment you entered my life, every prayer of mine found its answer. You are my home, my peace, and my forever."</p>
+            <h3>Archana, My Radha 🪷</h3>
+            <p>"Just as Radha is the very soul of Sri Krishna, you are the divine breath and joy of my life. I promise to cherish, respect, and love you under Lord Krishna's shelter for all our lifetimes."</p>
           </div>
           <canvas id="scratchCanvas"></canvas>
         </div>
@@ -1106,15 +1117,15 @@
     <!-- 4. HEARTBEAT SENSOR -->
     <section id="heartbeat">
       <div class="wrap text-center">
-        <div class="kicker">Feel The Rhythm</div>
-        <h2 class="title">Listen To My Heartbeat</h2>
-        <p class="title-sub">Press and hold the heart below to feel how my pulse races for you.</p>
+        <div class="kicker">Divine Rhythm</div>
+        <h2 class="title">Two Hearts Synchronized By Krishna</h2>
+        <p class="title-sub">Press and hold the lotus heart below to feel how my pulse beats only for you.</p>
 
         <div class="heartbeat-sensor">
           <div class="pulse-ring-btn" id="pulseBtn" title="Press and hold">
-            ❤️
+            🪷
           </div>
-          <div class="pulse-text" id="pulseStatus">Touch and hold to synchronize</div>
+          <div class="pulse-text" id="pulseStatus">Touch and hold to synchronize our souls</div>
         </div>
       </div>
     </section>
@@ -1124,11 +1135,11 @@
       <div class="proposal-box">
         <div class="kicker">The Question Of A Lifetime</div>
         <h2>Archana,<br>ready for forever with me?</h2>
-        <p>Not just for the celebration halls and wedding bells. For the thousands of quiet mornings, shared laughs, and lifetime of unconditional love.</p>
+        <p>Witnessed by Lord Sri Krishna and blessed by our families — a lifetime of standing beside you as your protector, your partner, and your devoted husband.</p>
 
         <div class="btn-arena" id="btnArena">
-          <button class="yes-proposal-btn" id="yesProposalBtn">YES, FOREVER! ❤️</button>
-          <button class="dodge-no-btn" id="dodgeNoBtn">Let me think... 🙈</button>
+          <button class="yes-proposal-btn" id="yesProposalBtn">YES, FOREVER! Radhe Radhe ❤️🦚</button>
+          <button class="dodge-no-btn" id="dodgeNoBtn">Let me ask Krishna... 🙈🪈</button>
         </div>
       </div>
     </section>
@@ -1142,34 +1153,34 @@
       <div class="cert-corner bl"></div>
       <div class="cert-corner br"></div>
 
-      <div class="cert-heading">Certificate of Eternal Love</div>
-      <div class="cert-title">The Sacred Covenant Between Two Souls</div>
-
       <div class="cert-avatar-wrap">
         <img src="images/couple.png" alt="Hemsagar & Archana" class="cert-avatar" />
       </div>
 
+      <div class="cert-heading">Sacred Covenant of Eternal Love</div>
+      <div class="cert-title">Witnessed & Blessed By Lord Sri Krishna 🦚</div>
+
       <div class="cert-names">Hemsagar & Archana</div>
 
       <div class="cert-vow">
-        "Witnessed by the stars, sealed with pure devotion, and bound by an unbreakable promise — to walk hand in hand through every season of life as partners, soulmates, and forever husband & wife."
+        "Bound by the sacred flute of Sri Krishna, sealed with pure devotion, and blessed by divine grace — to walk hand in hand through every season of life as partners, soulmates, and forever husband & wife."
       </div>
 
-      <div class="cert-seal">H & A</div>
+      <div class="cert-seal">🪈 H & A 🦚</div>
 
       <div class="cert-actions">
-        <button class="cert-btn" id="closeCertBtn">Close Keepsake 🤍</button>
+        <button class="cert-btn" id="closeCertBtn">Close Keepsake · Radhe Radhe 🤍</button>
       </div>
     </div>
   </div>
 
   <footer>
-    Made with eternal love only for Archana <span>❤️</span> By Hemsagar
+    Made with eternal devotion for Archana <span>🦚</span> Blessed by Lord Sri Krishna <span>🪈</span> By Hemsagar
   </footer>
 
   <script>
     /* ==========================================================================
-       1. Web Audio API Synthesizer (Acoustic Chime, Heartbeat & Melody)
+       1. Web Audio API Synthesizer - Lord Krishna's Divine Bansuri (Flute)
        ========================================================================== */
     let audioCtx = null;
     let isPlayingMelody = false;
@@ -1185,53 +1196,70 @@
       }
     }
 
-    function playChime(freq, duration = 2.4, type = 'sine', gainVal = 0.12) {
+    // Bamboo Flute Tone Generator with soft breath attack and warm harmonics
+    function playFluteNote(freq, duration = 2.8, gainVal = 0.14) {
       if (!audioCtx) return;
       try {
         const osc = audioCtx.createOscillator();
+        const subOsc = audioCtx.createOscillator();
         const gain = audioCtx.createGain();
         const filter = audioCtx.createBiquadFilter();
 
+        // Warm bamboo acoustic low-pass filter
         filter.type = 'lowpass';
-        filter.frequency.setValueAtTime(1400, audioCtx.currentTime);
+        filter.frequency.setValueAtTime(1800, audioCtx.currentTime);
 
-        osc.type = type;
+        osc.type = 'sine';
         osc.frequency.setValueAtTime(freq, audioCtx.currentTime);
 
+        // Gentle harmonic octave for bansuri airiness
+        subOsc.type = 'triangle';
+        subOsc.frequency.setValueAtTime(freq * 2, audioCtx.currentTime);
+
+        const subGain = audioCtx.createGain();
+        subGain.gain.setValueAtTime(0.04, audioCtx.currentTime);
+
+        // Soft breath entrance (crescendo) and natural lingering release
         gain.gain.setValueAtTime(0, audioCtx.currentTime);
-        gain.gain.linearRampToValueAtTime(gainVal, audioCtx.currentTime + 0.05);
+        gain.gain.linearRampToValueAtTime(gainVal, audioCtx.currentTime + 0.18);
         gain.gain.exponentialRampToValueAtTime(0.0001, audioCtx.currentTime + duration);
 
         osc.connect(filter);
+        subOsc.connect(subGain);
+        subGain.connect(filter);
         filter.connect(gain);
         gain.connect(audioCtx.destination);
 
         osc.start();
+        subOsc.start();
         osc.stop(audioCtx.currentTime + duration);
+        subOsc.stop(audioCtx.currentTime + duration);
       } catch (e) {
         console.error(e);
       }
     }
 
-    // Gentle acoustic arpeggio
-    const romanticScale = [329.63, 392.00, 440.00, 493.88, 587.33, 659.25, 783.99, 880.00];
+    // Sacred Raag Bhupali Pentatonic Krishna Flute Scale (D, E, F#, A, B, D5, E5)
+    const krishnaFluteScale = [293.66, 329.63, 369.99, 440.00, 493.88, 587.33, 659.25, 739.99];
 
-    function playRomanticArpeggio() {
+    function playKrishnaMelody() {
       if (!isPlayingMelody) return;
-      const notesToPlay = [
-        romanticScale[Math.floor(Math.random() * 4)],
-        romanticScale[2 + Math.floor(Math.random() * 4)],
-        romanticScale[4 + Math.floor(Math.random() * 4)]
+      
+      // Serene meditative phrasing
+      const phrase = [
+        krishnaFluteScale[Math.floor(Math.random() * 3)],
+        krishnaFluteScale[2 + Math.floor(Math.random() * 3)],
+        krishnaFluteScale[4 + Math.floor(Math.random() * 3)]
       ];
 
-      notesToPlay.forEach((freq, idx) => {
+      phrase.forEach((freq, idx) => {
         setTimeout(() => {
-          if (isPlayingMelody) playChime(freq, 2.6, 'sine', 0.09);
-        }, idx * 360);
+          if (isPlayingMelody) playFluteNote(freq, 3.2, 0.12);
+        }, idx * 420);
       });
 
-      const nextDelay = 2200 + Math.random() * 1800;
-      melodyTimer = setTimeout(playRomanticArpeggio, nextDelay);
+      const nextDelay = 2400 + Math.random() * 1800;
+      melodyTimer = setTimeout(playKrishnaMelody, nextDelay);
     }
 
     function startMusic() {
@@ -1239,15 +1267,15 @@
       if (!isPlayingMelody) {
         isPlayingMelody = true;
         audioToggle.classList.add('audio-playing');
-        audioStatusText.textContent = 'Melody Playing 🤍';
-        playRomanticArpeggio();
+        audioStatusText.textContent = 'Bansuri Playing 🪈';
+        playKrishnaMelody();
       }
     }
 
     function stopMusic() {
       isPlayingMelody = false;
       audioToggle.classList.remove('audio-playing');
-      audioStatusText.textContent = 'Play Our Melody';
+      audioStatusText.textContent = '🪈 Krishna\'s Flute';
       clearTimeout(melodyTimer);
     }
 
@@ -1268,12 +1296,12 @@
     openSurpriseBtn.addEventListener('click', () => {
       entranceModal.classList.add('opened');
       startMusic();
-      playChime(659.25, 3.0, 'sine', 0.2);
-      spawnHearts(36, window.innerWidth / 2, window.innerHeight / 2);
+      playFluteNote(587.33, 3.5, 0.2);
+      spawnPeacocksAndHearts(40, window.innerWidth / 2, window.innerHeight / 2);
     });
 
     /* ==========================================================================
-       3. Celestial Canvas (Background Starfield)
+       3. Celestial Canvas (Background Sage & Gold Starlight)
        ========================================================================== */
     const bgCanvas = document.getElementById('celestialCanvas');
     const bgCtx = bgCanvas.getContext('2d');
@@ -1287,13 +1315,14 @@
     window.addEventListener('resize', resizeBg);
     resizeBg();
 
-    for (let i = 0; i < 90; i++) {
+    for (let i = 0; i < 95; i++) {
       bgStars.push({
         x: Math.random() * window.innerWidth,
         y: Math.random() * window.innerHeight,
-        size: Math.random() * 1.8 + 0.4,
+        size: Math.random() * 1.9 + 0.4,
         alpha: Math.random() * 0.7 + 0.2,
-        speed: Math.random() * 0.02 + 0.005
+        speed: Math.random() * 0.02 + 0.005,
+        isGreen: Math.random() > 0.4
       });
     }
 
@@ -1301,7 +1330,8 @@
       bgCtx.clearRect(0, 0, bgW, bgH);
       bgStars.forEach(s => {
         s.alpha += Math.sin(Date.now() * s.speed) * 0.01;
-        bgCtx.fillStyle = `rgba(223, 189, 124, ${Math.max(0.1, Math.min(1, s.alpha))})`;
+        const color = s.isGreen ? `rgba(157, 212, 183, ${Math.max(0.1, Math.min(1, s.alpha))})` : `rgba(226, 192, 105, ${Math.max(0.1, Math.min(1, s.alpha))})`;
+        bgCtx.fillStyle = color;
         bgCtx.beginPath();
         bgCtx.arc(s.x, s.y, s.size, 0, Math.PI * 2);
         bgCtx.fill();
@@ -1326,11 +1356,11 @@
     window.addEventListener('resize', resizeSky);
 
     const constellationNodes = [
-      { x: 0.15, y: 0.45, label: "The First Hello ✨" },
-      { x: 0.32, y: 0.25, label: "The Day I Knew 🤍" },
-      { x: 0.50, y: 0.58, label: "Our Shared Laughter 🌸" },
-      { x: 0.68, y: 0.30, label: "Two Families, One Heart 🕊️" },
-      { x: 0.85, y: 0.52, label: "Our Forever Promise 💍" }
+      { x: 0.15, y: 0.45, label: "Destined By Sri Krishna 🦚" },
+      { x: 0.32, y: 0.25, label: "The First Smile 🤍" },
+      { x: 0.50, y: 0.58, label: "Pure Radha-Krishna Devotion 🪷" },
+      { x: 0.68, y: 0.30, label: "Two Families United By Grace 🕊️" },
+      { x: 0.85, y: 0.52, label: "Our Eternal Vow · Radhe Radhe 💍" }
     ];
 
     let mouseX = -100, mouseY = -100;
@@ -1355,7 +1385,7 @@
 
       actualNodes.forEach(node => {
         const dist = Math.hypot(node.x - mouseX, node.y - mouseY);
-        if (dist < 32) hovered = node;
+        if (dist < 34) hovered = node;
       });
 
       if (hovered) {
@@ -1363,7 +1393,7 @@
         milestoneBadge.style.left = hovered.x + 'px';
         milestoneBadge.style.top = hovered.y + 'px';
         milestoneBadge.classList.add('active');
-        playChime(659.25, 0.8, 'sine', 0.08);
+        playFluteNote(587.33, 1.2, 0.1);
       } else {
         milestoneBadge.classList.remove('active');
       }
@@ -1380,8 +1410,8 @@
 
       // Draw constellation connecting lines
       skyCtx.beginPath();
-      skyCtx.strokeStyle = 'rgba(223, 189, 124, 0.35)';
-      skyCtx.lineWidth = 1.5;
+      skyCtx.strokeStyle = 'rgba(157, 212, 183, 0.4)';
+      skyCtx.lineWidth = 1.6;
       skyCtx.setLineDash([4, 4]);
 
       for (let i = 0; i < actualNodes.length - 1; i++) {
@@ -1391,12 +1421,12 @@
       skyCtx.stroke();
       skyCtx.setLineDash([]);
 
-      // Connect mouse to closest star
+      // Connect mouse to closest star with peacock teal glow
       actualNodes.forEach(node => {
         const dist = Math.hypot(node.x - mouseX, node.y - mouseY);
         if (dist < 140) {
           skyCtx.beginPath();
-          skyCtx.strokeStyle = `rgba(230, 178, 186, ${1 - dist / 140})`;
+          skyCtx.strokeStyle = `rgba(226, 192, 105, ${1 - dist / 140})`;
           skyCtx.lineWidth = 1.8;
           skyCtx.moveTo(mouseX, mouseY);
           skyCtx.lineTo(node.x, node.y);
@@ -1407,8 +1437,8 @@
       // Draw Star Nodes
       actualNodes.forEach((node, i) => {
         skyCtx.beginPath();
-        skyCtx.fillStyle = '#dfbd7c';
-        skyCtx.shadowColor = '#dfbd7c';
+        skyCtx.fillStyle = '#e2c069';
+        skyCtx.shadowColor = '#9dd4b7';
         skyCtx.shadowBlur = 18;
         skyCtx.arc(node.x, node.y, 6.5, 0, Math.PI * 2);
         skyCtx.fill();
@@ -1416,7 +1446,7 @@
 
         // Outer pulse circle
         skyCtx.beginPath();
-        skyCtx.strokeStyle = 'rgba(223, 189, 124, 0.4)';
+        skyCtx.strokeStyle = 'rgba(157, 212, 183, 0.45)';
         skyCtx.arc(node.x, node.y, 14 + Math.sin(Date.now() * 0.003 + i) * 3, 0, Math.PI * 2);
         skyCtx.stroke();
       });
@@ -1426,7 +1456,7 @@
     renderSky();
 
     /* ==========================================================================
-       5. Interactive Golden Scratch Card (Canvas)
+       5. Interactive Golden Foil Scratch Card
        ========================================================================== */
     const scratchCanvas = document.getElementById('scratchCanvas');
     const sCtx = scratchCanvas.getContext('2d');
@@ -1436,22 +1466,20 @@
       scratchCanvas.width = scratchCanvas.parentElement.clientWidth;
       scratchCanvas.height = scratchCanvas.parentElement.clientHeight;
 
-      // Draw luxury golden gradient foil
       const grad = sCtx.createLinearGradient(0, 0, scratchCanvas.width, scratchCanvas.height);
-      grad.addColorStop(0, '#f2d699');
+      grad.addColorStop(0, '#f7e6b8');
       grad.addColorStop(0.3, '#d4a853');
-      grad.addColorStop(0.7, '#f7e2b2');
-      grad.addColorStop(1, '#a67c31');
+      grad.addColorStop(0.7, '#c4ecd6');
+      grad.addColorStop(1, '#9dd4b7');
 
       sCtx.fillStyle = grad;
       sCtx.fillRect(0, 0, scratchCanvas.width, scratchCanvas.height);
 
-      // Add golden foil stardust texture & label
       sCtx.font = "600 13px Inter, sans-serif";
-      sCtx.fillStyle = "#331804";
+      sCtx.fillStyle = "#0c2b18";
       sCtx.textAlign = "center";
       sCtx.letterSpacing = "0.25em";
-      sCtx.fillText("SCRATCH WITH LOVE", scratchCanvas.width / 2, scratchCanvas.height / 2);
+      sCtx.fillText("SCRATCH IN KRISHNA'S LOVE 🦚", scratchCanvas.width / 2, scratchCanvas.height / 2);
     }
     initScratchCard();
     window.addEventListener('resize', initScratchCard);
@@ -1468,16 +1496,16 @@
       sCtx.fill();
     }
 
-    scratchCanvas.addEventListener('mousedown', () => { isScratching = true; initAudio(); playChime(440, 0.4, 'triangle', 0.05); });
+    scratchCanvas.addEventListener('mousedown', () => { isScratching = true; initAudio(); playFluteNote(440, 0.5, 0.06); });
     scratchCanvas.addEventListener('mouseup', () => isScratching = false);
     scratchCanvas.addEventListener('mousemove', scratch);
 
-    scratchCanvas.addEventListener('touchstart', () => { isScratching = true; initAudio(); playChime(440, 0.4, 'triangle', 0.05); });
+    scratchCanvas.addEventListener('touchstart', () => { isScratching = true; initAudio(); playFluteNote(440, 0.5, 0.06); });
     scratchCanvas.addEventListener('touchend', () => isScratching = false);
     scratchCanvas.addEventListener('touchmove', scratch);
 
     /* ==========================================================================
-       6. Heartbeat Touch Sensor
+       6. Lotus Heartbeat Sensor
        ========================================================================== */
     const pulseBtn = document.getElementById('pulseBtn');
     const pulseStatus = document.getElementById('pulseStatus');
@@ -1485,20 +1513,20 @@
 
     function triggerHeartbeat() {
       initAudio();
-      playChime(130.81, 0.25, 'sine', 0.25);
-      setTimeout(() => playChime(110.00, 0.35, 'sine', 0.22), 160);
-      spawnHearts(6, window.innerWidth / 2, window.innerHeight * 0.75);
+      playFluteNote(293.66, 0.4, 0.22);
+      setTimeout(() => playFluteNote(329.63, 0.5, 0.18), 180);
+      spawnPeacocksAndHearts(6, window.innerWidth / 2, window.innerHeight * 0.75);
     }
 
     function startHeartSync() {
-      pulseStatus.textContent = 'Synchronizing heartbeats... 💓';
+      pulseStatus.textContent = 'Synchronizing in Radha-Krishna\'s eternal love... 🪷';
       triggerHeartbeat();
       heartInterval = setInterval(triggerHeartbeat, 850);
     }
 
     function stopHeartSync() {
       clearInterval(heartInterval);
-      pulseStatus.textContent = 'Our hearts beat as one forever ❤️';
+      pulseStatus.textContent = 'Our souls united forever in Sri Krishna\'s grace ❤️🦚';
     }
 
     pulseBtn.addEventListener('mousedown', startHeartSync);
@@ -1507,7 +1535,7 @@
     pulseBtn.addEventListener('touchend', stopHeartSync);
 
     /* ==========================================================================
-       7. Playful Dodging Button Proposal Arena
+       7. Playful Dodging Proposal Arena
        ========================================================================== */
     const dodgeBtn = document.getElementById('dodgeNoBtn');
     const yesBtn = document.getElementById('yesProposalBtn');
@@ -1515,18 +1543,18 @@
     const closeCertBtn = document.getElementById('closeCertBtn');
 
     const dodgeReplies = [
-      "Wait, let me think... 🙈",
-      "Oops, too slow! 😉",
-      "Nice try! Forever is the only answer ❤️",
-      "Are you teasing me? 🥰",
-      "Destiny says YES! ✨",
-      "No running away from forever! 💍"
+      "Let me ask Krishna... 🙈🪈",
+      "Krishna says YES! 😉🦚",
+      "Radhe Radhe! Forever is destined ❤️",
+      "Are you teasing your Krishna devotee? 🥰",
+      "Vrindavan stars already agreed! ✨",
+      "Destined for eternity! 💍🪷"
     ];
     let dodgeCount = 0;
 
     function dodgeButton() {
       initAudio();
-      playChime(523.25, 0.3, 'sine', 0.1);
+      playFluteNote(493.88, 0.35, 0.12);
       const arena = document.getElementById('btnArena');
       const arenaRect = arena.getBoundingClientRect();
 
@@ -1540,7 +1568,6 @@
       dodgeCount++;
       dodgeBtn.textContent = dodgeReplies[dodgeCount % dodgeReplies.length];
 
-      // Grow the YES button!
       yesBtn.style.transform = `scale(${1 + Math.min(dodgeCount * 0.08, 0.5)})`;
     }
 
@@ -1549,12 +1576,12 @@
 
     yesBtn.addEventListener('click', () => {
       initAudio();
-      // Fanfare celebration chords
-      [523.25, 659.25, 783.99, 1046.50, 1318.51].forEach((freq, idx) => {
-        setTimeout(() => playChime(freq, 3.2, 'triangle', 0.18), idx * 160);
+      // Joyous Vrindavan Flute Fanfare
+      [369.99, 440.00, 493.88, 587.33, 739.99].forEach((freq, idx) => {
+        setTimeout(() => playFluteNote(freq, 3.2, 0.18), idx * 160);
       });
 
-      spawnHearts(80);
+      spawnPeacocksAndHearts(85);
       setTimeout(() => {
         certModal.classList.add('active');
       }, 800);
@@ -1597,21 +1624,21 @@
     });
 
     /* ==========================================================================
-       9. Flying Hearts Generator
+       9. Flying Peacocks, Lotuses, Feathers & Hearts Generator
        ========================================================================== */
-    function spawnHearts(count = 30, customX = null, customY = null) {
+    function spawnPeacocksAndHearts(count = 30, customX = null, customY = null) {
       for (let i = 0; i < count; i++) {
         const h = document.createElement('div');
         h.className = 'heart';
-        h.textContent = ['❤', '♡', '✦', '✨', '💖', '💍'][Math.floor(Math.random() * 6)];
+        h.textContent = ['🦚', '🪈', '🪷', '✨', '💚', '❤️', '🤍'][Math.floor(Math.random() * 7)];
 
         const startX = customX !== null ? (customX + (Math.random() - 0.5) * 200) : (window.innerWidth * (0.15 + Math.random() * 0.7));
         const startY = customY !== null ? (customY + (Math.random() - 0.5) * 100) : (window.innerHeight * (0.6 + Math.random() * 0.3));
 
         h.style.left = startX + 'px';
         h.style.top = startY + 'px';
-        h.style.fontSize = (16 + Math.random() * 26) + 'px';
-        h.style.color = ['#fff9f2', '#e6b2ba', '#dfbd7c', '#f5cfd6'][Math.floor(Math.random() * 4)];
+        h.style.fontSize = (18 + Math.random() * 26) + 'px';
+        h.style.color = ['#c4ecd6', '#9dd4b7', '#e2c069', '#f8fbf9'][Math.floor(Math.random() * 4)];
         h.style.animationDelay = (Math.random() * 0.6) + 's';
 
         document.body.appendChild(h);
@@ -1629,7 +1656,7 @@
     const savedDestiny = localStorage.getItem('hemsagar_archana_fixed_date');
     if (savedDestiny) {
       destinyStatusVal.textContent = savedDestiny;
-      destinyStatusLabel.textContent = `💍 Sacred Date Fixed: ${savedDestiny} ❤️`;
+      destinyStatusLabel.textContent = `🦚 Sacred Date Fixed: ${savedDestiny} · Radhe Radhe ❤️`;
       stampDateBtn.textContent = '✏️ Update Fixed Date';
     }
 
@@ -1639,11 +1666,11 @@
         const trimmed = input.trim();
         localStorage.setItem('hemsagar_archana_fixed_date', trimmed);
         destinyStatusVal.textContent = trimmed;
-        destinyStatusLabel.textContent = `💍 Sacred Date Fixed: ${trimmed} ❤️`;
+        destinyStatusLabel.textContent = `🦚 Sacred Date Fixed: ${trimmed} · Radhe Radhe ❤️`;
         stampDateBtn.textContent = '✏️ Update Fixed Date';
         initAudio();
-        playChime(783.99, 2.5, 'sine', 0.18);
-        spawnHearts(25);
+        playFluteNote(587.33, 2.5, 0.18);
+        spawnPeacocksAndHearts(25);
       }
     });
   </script>
