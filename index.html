@@ -346,6 +346,92 @@
       100% { transform: translate(-50%, 14px); opacity: 0; }
     }
 
+    /* OPTION 2: DESTINY DATE SECTION */
+    .destiny-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-top: 40px;
+    }
+    .destiny-card {
+      background: linear-gradient(145deg, rgba(255, 255, 255, 0.04), rgba(46, 14, 26, 0.35));
+      border: 1px solid var(--border-gold);
+      border-radius: 24px;
+      padding: 34px 22px;
+      text-align: center;
+      backdrop-filter: blur(12px);
+      transition: all 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+    }
+    .destiny-card:hover {
+      transform: translateY(-6px);
+      border-color: var(--gold);
+      box-shadow: 0 16px 45px rgba(0,0,0,0.55), 0 0 25px var(--gold-glow);
+    }
+    .destiny-icon {
+      font-size: 34px;
+      margin-bottom: 14px;
+      display: inline-block;
+    }
+    .destiny-tag {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.22em;
+      color: var(--gold);
+      margin-bottom: 8px;
+      font-weight: 500;
+    }
+    .destiny-val {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 26px;
+      color: var(--ivory);
+      margin-bottom: 8px;
+      font-weight: 600;
+    }
+    .destiny-desc {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.65;
+    }
+    .destiny-stamp-box {
+      margin-top: 36px;
+      padding: 24px 30px;
+      background: rgba(223, 189, 124, 0.05);
+      border: 1px dashed var(--border-gold);
+      border-radius: 24px;
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+    .destiny-stamp-btn {
+      background: linear-gradient(135deg, rgba(223, 189, 124, 0.2), rgba(91, 21, 39, 0.45));
+      border: 1px solid var(--gold);
+      color: var(--gold-light);
+      padding: 11px 26px;
+      border-radius: 999px;
+      font-size: 13px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: all 0.25s ease;
+      letter-spacing: 0.04em;
+    }
+    .destiny-stamp-btn:hover {
+      background: var(--gold);
+      color: #2b0e16;
+      box-shadow: 0 0 25px var(--gold-glow);
+    }
+    .destiny-status-label {
+      font-size: 15px;
+      font-style: italic;
+      color: var(--gold-light);
+      font-family: 'Cormorant Garamond', Georgia, serif;
+    }
+    @media (max-width: 860px) {
+      .destiny-grid { grid-template-columns: 1fr; }
+    }
+
     /* 1. CELESTIAL CONSTELLATION MAP SECTION */
     .constellation-box {
       position: relative;
@@ -828,10 +914,49 @@
         <div class="subtitle">Where our stars aligned to write forever.</div>
         <div class="date-tag">A Love Written In The Heavens</div>
         <div>
-          <a class="scroll-down" href="#constellation">
+          <a class="scroll-down" href="#destinyDate">
             <div class="mouse-icon"></div>
             <span>Explore Our Universe</span>
           </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- OPTION 2: OUR SACRED DATE: BEING WRITTEN IN THE STARS -->
+    <section id="destinyDate">
+      <div class="wrap text-center">
+        <div class="kicker">A Sacred Covenant</div>
+        <h2 class="title">Our Date: Being Written In The Stars</h2>
+        <p class="title-sub">
+          The exact calendar day is currently being woven by destiny, family blessings, and the elders... but my heart made its eternal choice the very moment I saw you.
+        </p>
+
+        <div class="destiny-grid">
+          <div class="destiny-card">
+            <div class="destiny-icon">🕊️</div>
+            <div class="destiny-tag">Our Muhurtham</div>
+            <div class="destiny-val" id="destinyStatusVal">Awaiting Sacred Muhurtham</div>
+            <div class="destiny-desc">Being calculated with love, auspicious prayers, and two families uniting as one.</div>
+          </div>
+
+          <div class="destiny-card">
+            <div class="destiny-icon">💍</div>
+            <div class="destiny-tag">Hemsagar's Vow</div>
+            <div class="destiny-val">Decided On Day One</div>
+            <div class="destiny-desc">Any day of any year that brings me you as my wife is already the greatest day of my life.</div>
+          </div>
+
+          <div class="destiny-card">
+            <div class="destiny-icon">👑</div>
+            <div class="destiny-tag">My Only Bride</div>
+            <div class="destiny-val">Archana Forever</div>
+            <div class="destiny-desc">No matter the day or month, there is only one soul destined to walk this lifetime beside me.</div>
+          </div>
+        </div>
+
+        <div class="destiny-stamp-box">
+          <div class="destiny-status-label" id="destinyStatusLabel">✨ "The stars are aligning our perfect day..." ✨</div>
+          <button class="destiny-stamp-btn" id="stampDateBtn">📅 When Fixed, Tap Here To Stamp Our Date</button>
         </div>
       </div>
     </section>
@@ -1427,6 +1552,34 @@
         setTimeout(() => h.remove(), 3400);
       }
     }
+
+    /* ==========================================================================
+       10. Destiny Date Stamping (When Fixed)
+       ========================================================================== */
+    const stampDateBtn = document.getElementById('stampDateBtn');
+    const destinyStatusVal = document.getElementById('destinyStatusVal');
+    const destinyStatusLabel = document.getElementById('destinyStatusLabel');
+
+    const savedDestiny = localStorage.getItem('hemsagar_archana_fixed_date');
+    if (savedDestiny) {
+      destinyStatusVal.textContent = savedDestiny;
+      destinyStatusLabel.textContent = `💍 Sacred Date Fixed: ${savedDestiny} ❤️`;
+      stampDateBtn.textContent = '✏️ Update Fixed Date';
+    }
+
+    stampDateBtn.addEventListener('click', () => {
+      const input = prompt('Enter your confirmed wedding date or month (e.g., December 2026):', savedDestiny || '');
+      if (input && input.trim()) {
+        const trimmed = input.trim();
+        localStorage.setItem('hemsagar_archana_fixed_date', trimmed);
+        destinyStatusVal.textContent = trimmed;
+        destinyStatusLabel.textContent = `💍 Sacred Date Fixed: ${trimmed} ❤️`;
+        stampDateBtn.textContent = '✏️ Update Fixed Date';
+        initAudio();
+        playChime(783.99, 2.5, 'sine', 0.18);
+        spawnHearts(25);
+      }
+    });
   </script>
 </body>
 </html>
