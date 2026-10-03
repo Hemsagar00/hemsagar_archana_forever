@@ -7,6 +7,21 @@
   <meta name="description" content="A divine romantic universe and sacred proposal keepsake created with eternal devotion by Hemsagar for Archana, under the divine grace of Lord Sri Krishna." />
   <meta name="theme-color" content="#07170f" />
 
+  <!-- Cloudflare & Social OpenGraph Meta Tags for Rich WhatsApp / iMessage Preview -->
+  <meta property="og:title" content="Hemsagar ❤️ Archana — Blessed by Lord Sri Krishna 🦚" />
+  <meta property="og:description" content="A sacred love as eternal as Radha & Krishna. Put on your earphones 🎧" />
+  <meta property="og:image" content="images/couple.png" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Hemsagar ❤️ Archana — Blessed by Lord Sri Krishna 🦚" />
+  <meta name="twitter:description" content="A sacred love as eternal as Radha & Krishna. Put on your earphones 🎧" />
+  <meta name="twitter:image" content="images/couple.png" />
+
+  <!-- Cloudflare Global CDN Preload Critical Couple Images -->
+  <link rel="preload" as="image" href="images/couple.png">
+  <link rel="preload" as="image" href="images/archana.jpg">
+  <link rel="preload" as="image" href="images/hemsagar.jpg">
+
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -264,6 +279,18 @@
       0%, 100% { transform: scale(1); opacity: 0.75; }
       50% { transform: scale(1.1); opacity: 0.95; }
     }
+    /* Ultra-smooth Scroll Reveals (IntersectionObserver) */
+    .reveal-item {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1), transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: opacity, transform;
+    }
+    .reveal-item.revealed {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
     .hero-card {
       position: relative;
       width: min(1020px, 100%);
@@ -997,7 +1024,7 @@
 
     <!-- OPTION 2: OUR SACRED DATE: BEING WRITTEN IN THE STARS -->
     <section id="destinyDate">
-      <div class="wrap text-center">
+      <div class="wrap text-center reveal-item">
         <div class="kicker">A Divine Covenant</div>
         <h2 class="title">Our Sacred Date: Written By Sri Krishna</h2>
         <p class="title-sub">
@@ -1036,7 +1063,7 @@
 
     <!-- 1. INTERACTIVE CELESTIAL CONSTELLATION MAP -->
     <section id="constellation">
-      <div class="wrap text-center">
+      <div class="wrap text-center reveal-item">
         <div class="kicker">Vrindavan Constellations</div>
         <h2 class="title">The Stars On The Path To You</h2>
         <p class="title-sub">Move your cursor or touch the night sky to connect the constellation stars illuminated by Lord Krishna's light.</p>
@@ -1051,7 +1078,7 @@
 
     <!-- 2. VINTAGE POLAROID SCRAPBOOK GALLERY -->
     <section id="scrapbook">
-      <div class="wrap text-center">
+      <div class="wrap text-center reveal-item">
         <div class="kicker">Blessed Moments</div>
         <h2 class="title">Our Vintage Memories</h2>
         <p class="title-sub">Our sacred memories pinned onto the scrapbook of our lives. Tap any photo to personalize.</p>
@@ -1098,7 +1125,7 @@
 
     <!-- 3. INTERACTIVE GOLDEN FOIL SCRATCH CARD -->
     <section class="scratch-section" id="scratchSection">
-      <div class="wrap">
+      <div class="wrap reveal-item">
         <div class="kicker">A Sacred Secret</div>
         <h2 class="title">Scratch To Reveal My Heart's Prayer</h2>
         <p class="title-sub">Rub your finger or mouse across the sacred temple gold foil to uncover the whisper of my soul.</p>
@@ -1116,7 +1143,7 @@
 
     <!-- 4. HEARTBEAT SENSOR -->
     <section id="heartbeat">
-      <div class="wrap text-center">
+      <div class="wrap text-center reveal-item">
         <div class="kicker">Divine Rhythm</div>
         <h2 class="title">Two Hearts Synchronized By Krishna</h2>
         <p class="title-sub">Press and hold the lotus heart below to feel how my pulse beats only for you.</p>
@@ -1132,7 +1159,7 @@
 
     <!-- 5. PLAYFUL DODGING PROPOSAL ARENA -->
     <section class="proposal-arena" id="proposal">
-      <div class="proposal-box">
+      <div class="proposal-box reveal-item">
         <div class="kicker">The Question Of A Lifetime</div>
         <h2>Archana,<br>ready for forever with me?</h2>
         <p>Witnessed by Lord Sri Krishna and blessed by our families — a lifetime of standing beside you as your protector, your partner, and your devoted husband.</p>
@@ -1673,6 +1700,33 @@
         spawnPeacocksAndHearts(25);
       }
     });
+
+    /* ==========================================================================
+       11. Cloudflare Smooth Scroll Observer & Desktop Parallax
+       ========================================================================== */
+    const revealObserver = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('revealed');
+          obs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: "0px 0px -40px 0px" });
+
+    document.querySelectorAll('.reveal-item').forEach(el => revealObserver.observe(el));
+
+    // Smooth Desktop Parallax on Hero Card
+    const heroCard = document.querySelector('.hero-card');
+    if (heroCard && window.matchMedia('(hover: hover)').matches) {
+      window.addEventListener('mousemove', (e) => {
+        const x = (e.clientX / window.innerWidth - 0.5) * 12;
+        const y = (e.clientY / window.innerHeight - 0.5) * 12;
+        heroCard.style.transform = `perspective(1000px) rotateY(${x}deg) rotateX(${-y}deg)`;
+      });
+      window.addEventListener('mouseleave', () => {
+        heroCard.style.transform = 'perspective(1000px) rotateY(0deg) rotateX(0deg)';
+      });
+    }
   </script>
 </body>
 </html>
