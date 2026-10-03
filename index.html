@@ -254,6 +254,62 @@
       text-align: center;
       overflow: hidden;
     }
+    .hero-couple-avatar-wrap {
+      width: 150px;
+      height: 150px;
+      margin: 0 auto 24px;
+      border-radius: 50%;
+      padding: 4px;
+      background: linear-gradient(135deg, var(--gold), var(--rose), var(--gold-light));
+      box-shadow: 0 0 40px var(--gold-glow), 0 12px 35px rgba(0,0,0,0.6);
+      animation: avatarFloat 4.5s ease-in-out infinite;
+    }
+    @keyframes avatarFloat {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+    .hero-couple-avatar {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      display: block;
+      border: 3px solid #090306;
+    }
+    .entrance-avatar-wrap {
+      width: 120px;
+      height: 120px;
+      margin: 0 auto 16px;
+      border-radius: 50%;
+      padding: 3.5px;
+      background: linear-gradient(135deg, var(--gold), var(--rose), var(--gold-light));
+      box-shadow: 0 0 30px var(--gold-glow), 0 10px 25px rgba(0,0,0,0.6);
+    }
+    .entrance-avatar {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      display: block;
+      border: 2px solid #090306;
+    }
+    .cert-avatar-wrap {
+      width: 110px;
+      height: 110px;
+      margin: 0 auto 18px;
+      border-radius: 50%;
+      padding: 3.5px;
+      background: linear-gradient(135deg, var(--gold), var(--rose), var(--gold));
+      box-shadow: 0 0 30px var(--gold-glow);
+    }
+    .cert-avatar {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      display: block;
+      border: 2px solid #090306;
+    }
     .hero-card::before {
       content: "";
       position: absolute;
@@ -888,6 +944,9 @@
   <!-- ROYAL ENTRANCE MODAL -->
   <div class="entrance-modal" id="entranceModal">
     <div class="entrance-card">
+      <div class="entrance-avatar-wrap">
+        <img src="images/couple.png" alt="Hemsagar & Archana" class="entrance-avatar" />
+      </div>
       <div class="entrance-monogram">H & A</div>
       <div class="entrance-eyebrow">A Universe Created For Archana</div>
       <h2 class="entrance-title">Before we step into forever together...</h2>
@@ -905,6 +964,9 @@
     <section class="hero">
       <div class="glow-aura"></div>
       <div class="hero-card">
+        <div class="hero-couple-avatar-wrap">
+          <img src="images/couple.png" alt="Hemsagar & Archana" class="hero-couple-avatar" />
+        </div>
         <div class="eyebrow">One story · Two hearts · One forever</div>
         <h1 class="names">
           <span>Hemsagar</span>
@@ -984,39 +1046,39 @@
         <p class="title-sub">Our favorite snapshots pinned onto the scrapbook of our lives. Tap any photo to personalize.</p>
 
         <div class="polaroid-gallery">
-          <!-- Polaroid 1 -->
+          <!-- Polaroid 1: Hemsagar -->
           <div class="polaroid-card" id="polaroidCard1">
             <div class="washi-tape"></div>
             <button class="polaroid-upload-btn" id="uploadBtn1">📷 Change Photo</button>
             <div class="polaroid-img-wrap">
-              <img class="polaroid-img" id="polaroidImg1" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 400 400'><defs><radialGradient id='p1' cx='50%25' cy='40%25' r='60%25'><stop offset='0%25' stop-color='%2361182c'/><stop offset='100%25' stop-color='%2312060b'/></radialGradient></defs><rect width='100%25' height='100%25' fill='url(%23p1)'/><circle cx='200' cy='180' r='50' fill='none' stroke='%23dfbd7c' stroke-width='1.5'/><path d='M200,165 C208,150 230,150 230,172 C230,195 200,212 200,212 C200,212 170,195 170,172 C170,150 192,150 200,165 Z' fill='%23e6b2ba' opacity='0.85'/></svg>" alt="The Spark" />
+              <img class="polaroid-img" id="polaroidImg1" src="images/hemsagar.jpg" alt="Hemsagar" />
             </div>
-            <div class="polaroid-caption">The First Spark</div>
-            <div class="polaroid-date">Chapter 01 · Destiny Began</div>
+            <div class="polaroid-caption">The Man Who Loves You</div>
+            <div class="polaroid-date">Hemsagar · With All My Heart</div>
             <input type="file" accept="image/*" style="display:none;" id="fileInput1" />
           </div>
 
-          <!-- Polaroid 2 -->
+          <!-- Polaroid 2: Archana -->
           <div class="polaroid-card" id="polaroidCard2">
             <div class="washi-tape"></div>
             <button class="polaroid-upload-btn" id="uploadBtn2">📷 Change Photo</button>
             <div class="polaroid-img-wrap">
-              <img class="polaroid-img" id="polaroidImg2" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 400 400'><defs><radialGradient id='p2' cx='50%25' cy='40%25' r='60%25'><stop offset='0%25' stop-color='%237b1d35'/><stop offset='100%25' stop-color='%2312060b'/></radialGradient></defs><rect width='100%25' height='100%25' fill='url(%23p2)'/><circle cx='200' cy='180' r='60' fill='none' stroke='%23dfbd7c' stroke-width='1.5'/><path d='M200,160 C210,145 235,145 235,170 C235,195 200,218 200,218 C200,218 165,195 165,170 C165,145 190,145 200,160 Z' fill='%23dfbd7c' opacity='0.85'/></svg>" alt="Your Smile" />
+              <img class="polaroid-img" id="polaroidImg2" src="images/archana.jpg" alt="Archana" />
             </div>
-            <div class="polaroid-caption">Your Beautiful Smile</div>
-            <div class="polaroid-date">Chapter 02 · My Entire World</div>
+            <div class="polaroid-caption">My Beautiful Queen</div>
+            <div class="polaroid-date">Archana · My Whole World</div>
             <input type="file" accept="image/*" style="display:none;" id="fileInput2" />
           </div>
 
-          <!-- Polaroid 3 -->
+          <!-- Polaroid 3: Couple Together -->
           <div class="polaroid-card" id="polaroidCard3">
             <div class="washi-tape"></div>
             <button class="polaroid-upload-btn" id="uploadBtn3">📷 Change Photo</button>
             <div class="polaroid-img-wrap">
-              <img class="polaroid-img" id="polaroidImg3" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 400 400'><defs><radialGradient id='p3' cx='50%25' cy='40%25' r='60%25'><stop offset='0%25' stop-color='%234a1020'/><stop offset='100%25' stop-color='%2312060b'/></radialGradient></defs><rect width='100%25' height='100%25' fill='url(%23p3)'/><circle cx='200' cy='180' r='50' fill='none' stroke='%23dfbd7c' stroke-width='1.5'/><path d='M200,165 C208,150 230,150 230,172 C230,195 200,212 200,212 C200,212 170,195 170,172 C170,150 192,150 200,165 Z' fill='%23e6b2ba' opacity='0.85'/></svg>" alt="Our Forever" />
+              <img class="polaroid-img" id="polaroidImg3" src="images/couple.png" alt="Hemsagar & Archana" />
             </div>
-            <div class="polaroid-caption">Us, Together Forever</div>
-            <div class="polaroid-date">Chapter 03 · Hand In Hand</div>
+            <div class="polaroid-caption">Us, Written In The Stars</div>
+            <div class="polaroid-date">Hemsagar & Archana Forever</div>
             <input type="file" accept="image/*" style="display:none;" id="fileInput3" />
           </div>
         </div>
@@ -1082,6 +1144,10 @@
 
       <div class="cert-heading">Certificate of Eternal Love</div>
       <div class="cert-title">The Sacred Covenant Between Two Souls</div>
+
+      <div class="cert-avatar-wrap">
+        <img src="images/couple.png" alt="Hemsagar & Archana" class="cert-avatar" />
+      </div>
 
       <div class="cert-names">Hemsagar & Archana</div>
 
