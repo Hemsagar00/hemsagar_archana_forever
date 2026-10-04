@@ -24,12 +24,13 @@ export const LOVE_STORY = {
   letter: {
     heading: "Archana,",
     paragraphs: [
-      "I may not always know the perfect words, but I know exactly what I want from life — to walk through it with you.",
-      "I want the ordinary days, the difficult days, the celebrations, the silence, the laughter, and everything in between.",
+      "I may not always know the perfect words, but I know one thing with complete certainty — I want to walk through life with you.",
+      "I want the ordinary days, the difficult days, the quiet moments, the laughter, the celebrations, and everything in between.",
       "I promise to respect you, stand beside you, listen to you, protect our peace, and keep choosing you.",
-      "Not only on the day we marry, but on every day that follows."
+      "Not only on the day we marry, but on every day that follows.",
+      "I may not be perfect, and life may not always be perfect, but I promise that you will never have to face it alone."
     ],
-    signature: "Hemsagar"
+    signature: "With love,\nHemsagar"
   },
 
   splitBridge: "And somewhere between two lives, there became one future.",
@@ -147,17 +148,17 @@ export const LOVE_STORY = {
     {
       number: "01",
       title: "RESPECT",
-      text: "I will respect your dreams, your choices, and the person you are."
+      text: "I will respect your thoughts, your choices, your dreams, and the person you are."
     },
     {
       number: "02",
       title: "PARTNERSHIP",
-      text: "I will walk beside you — not ahead, not behind."
+      text: "I will stand beside you in the easy days and even closer in the difficult ones."
     },
     {
       number: "03",
-      title: "HOME",
-      text: "Wherever life takes us, I want us to remain each other's safest place."
+      title: "PEACE",
+      text: "I will protect the peace we create together and never stop choosing us."
     }
   ],
 
@@ -168,7 +169,7 @@ export const LOVE_STORY = {
 
   proposal: {
     name: "Archana...",
-    lead: "I have only one question left.",
+    lead: "All of these promises lead to one question.",
     question: "Archana, shall we make forever ours?",
     yesLabel: "YES ❤️",
     hugLabel: "FIRST, GIVE ME A HUG 😄",
@@ -181,7 +182,7 @@ export const LOVE_STORY = {
   keepsake: {
     heading: "OUR PROMISE",
     couple: "Hemsagar & Archana",
-    vow: "To build a life rooted in love, respect, patience, laughter, and faith.",
+    vow: "To respect each other. To stand beside each other. To protect our peace. And to keep choosing each other, every day that follows.",
     signed: "With love, Hemsagar"
   }
 };

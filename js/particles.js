@@ -15,6 +15,8 @@ export class ParticleSystem {
     this.rafId = null;
     this.isCelebration = false;
     this.celebrationDecayTimer = null;
+    this.speedFactor = 1.0;
+    this.slowTimer = null;
 
     this.isMobile = window.innerWidth <= 768;
     this.maxAmbient = this.isMobile
@@ -109,6 +111,14 @@ export class ParticleSystem {
     }, 6000);
   }
 
+  slowDown(durationMs = 2800) {
+    this.speedFactor = 0.25;
+    if (this.slowTimer) clearTimeout(this.slowTimer);
+    this.slowTimer = setTimeout(() => {
+      this.speedFactor = 1.0;
+    }, durationMs);
+  }
+
   start() {
     if (!this.isRunning) {
       this.isRunning = true;
@@ -134,8 +144,8 @@ export class ParticleSystem {
     for (let i = this.particles.length - 1; i >= 0; i--) {
       const p = this.particles[i];
 
-      p.x += p.vx;
-      p.y += p.vy;
+      p.x += p.vx * this.speedFactor;
+      p.y += p.vy * this.speedFactor;
 
       if (p.isPetal) {
         p.rotation += p.vRot;

@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // 2. Initialize Central Motion Controller (IntersectionObserver & Parallax)
-  const motionController = new MotionController();
+  const motionController = new MotionController({ audioManager, particleSystem });
 
   // 3. Audio Toggle Button
   const audioToggle = document.getElementById('audioToggle');

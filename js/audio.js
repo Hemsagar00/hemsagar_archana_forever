@@ -65,6 +65,22 @@ class AudioManager {
     }
   }
 
+  softenAmbient(durationMs = 2800) {
+    if (!this.ctx || !this.ambientGain || !this.isPlaying) return;
+    try {
+      const now = this.ctx.currentTime;
+      const currentGain = this.ambientGain.gain.value;
+      const targetDip = 0.025;
+      const normalGain = 0.08;
+
+      this.ambientGain.gain.cancelScheduledValues(now);
+      this.ambientGain.gain.setValueAtTime(currentGain, now);
+      this.ambientGain.gain.linearRampToValueAtTime(targetDip, now + 0.6);
+      this.ambientGain.gain.setValueAtTime(targetDip, now + (durationMs / 1000) - 0.6);
+      this.ambientGain.gain.linearRampToValueAtTime(normalGain, now + (durationMs / 1000));
+    } catch (e) {}
+  }
+
   scheduleNextBansuriNote() {
     if (!this.isPlaying || !this.ctx) return;
 

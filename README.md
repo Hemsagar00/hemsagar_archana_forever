@@ -15,13 +15,13 @@ The experience is structured across 15 curated emotional moments:
 2. **Section 1 — Cinematic Entrance**: Atmospheric emerald opening screen with Archana's illuminated portrait, dedicated message ("I made something only for you"), and an entrance gesture initiating audio and View Transitions.
 3. **Section 2 — Hero**: High-priority couple portrait, Vrindavan light aura, subtle desktop pointer parallax, and line-level typography reveals.
 4. **Section 3 — Quiet Transition**: A reflective breathing space before the love letter ("Some stories begin loudly. Ours simply felt right.").
-5. **Section 4 — Love Letter**: Sacred vows with line-level opacity, subtle blur-to-sharp transitions, and an authentic signature accent.
+5. **Section 4 — Love Letter & The Promise**: The emotional center of the website featuring line-by-line reveals of the sacred promise ("I promise to respect you, stand beside you, listen to you, protect our peace, and keep choosing you. Not only on the day we marry, but on every day that follows."), accompanied by subtle background dimming, warm gold aura, and an intimate audio/particle softening micro-interaction.
 6. **Section 5 — Two Portraits (Editorial Split)**: Visual side-by-side editorial perspective featuring Hemsagar (left) and Archana (right), connected by a central golden bridge.
 7. **Section 6 — Our Story**: Cinematic vertical milestone timeline with glowing nodes and progressive scroll illumination.
 8. **Section 7 — Editorial Photo Story & Lightbox**: Asymmetric magazine-style photography story with an accessible, keyboard-trapped modal dialog, touch swipe navigation, and View Transitions.
 9. **Section 8 — Constellation Map**: 5-node interactive star constellation with glowing SVG orbits, touch ripples, and single-note audio synthesis on active node change only.
 10. **Section 9 — Tactile Scratch Reveal**: Gold-foil scratch card using Pointer Events (`touch-action: none`) with downscaled 40×20 throttled pixel ratio analysis that smoothly auto-reveals at 60%.
-11. **Section 10 — Three Promises**: 3-column editorial cards (Respect, Partnership, Home) with progressive hover elevation and glow.
+11. **Section 10 — Three Promises**: 3-column editorial cards (Respect, Partnership, Peace) with progressive hover elevation and glow.
 12. **Section 11 — Heartbeat Sensor**: Pointer-captured interactive button with concentric pulsing rings and a 2.5-second holding threshold revealing our shared truth.
 13. **Section 12 — Wedding Date / Countdown**: Dual-state engine displaying an elegant status ("Our date is still being written. But my decision already is.") or a live 1Hz tabular countdown when a date is configured.
 14. **Section 13 — Pre-Finale Silence**: A deep, dark quiet pause before the question.
